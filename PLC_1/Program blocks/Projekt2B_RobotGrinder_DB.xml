@@ -3,15 +3,30 @@
   <Engineering version="V19" />
   <SW.Blocks.InstanceDB ID="0">
     <AttributeList>
-      <InstanceOfName>Projekt_2B_Robotgrinder</InstanceOfName>
+      <InstanceOfName>Projekt2B_RobotGrinder</InstanceOfName>
       <InstanceOfType>FB</InstanceOfType>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
-  <Section Name="Input" />
-  <Section Name="Output" />
+  <Section Name="Input">
+    <Member Name="Emergency_Stop_Status_150K1" Datatype="Bool" />
+    <Member Name="Sensor_102B2" Datatype="Bool" />
+    <Member Name="Sensor_102B3" Datatype="Bool" />
+    <Member Name="Sensor_102B4" Datatype="Bool" />
+    <Member Name="Sensor_102B5" Datatype="Bool" />
+    <Member Name="Sensor_102B6" Datatype="Bool" />
+    <Member Name="Reset" Datatype="Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Valve_106Q6" Datatype="Bool" />
+    <Member Name="Motor_4Q3" Datatype="Bool" />
+    <Member Name="Motor_4Q5" Datatype="Bool" />
+    <Member Name="Motor_6Q1" Datatype="Bool" />
+    <Member Name="Motor_6Q3" Datatype="Bool" />
+    <Member Name="Reset_Safety_150K1" Datatype="Bool" />
+  </Section>
   <Section Name="InOut" />
   <Section Name="Static" />
 </Sections></Interface>
-      <Name>Projekt_2B_Robotgrinder_DB</Name>
+      <Name>Projekt2B_RobotGrinder_DB</Name>
       <Namespace />
       <Number>1</Number>
       <ProgrammingLanguage>DB</ProgrammingLanguage>

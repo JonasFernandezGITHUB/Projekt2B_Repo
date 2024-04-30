@@ -1,0 +1,16 @@
+﻿FUNCTION "Emergency_Stop" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Emergency_Stop_Signal : Bool;
+      Reset : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      Output : Bool;
+   END_VAR
+
+
+BEGIN
+END_FUNCTION
+
