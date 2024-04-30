@@ -14,6 +14,7 @@
     <Member Name="Sensor_102B5" Datatype="Bool" />
     <Member Name="Sensor_102B6" Datatype="Bool" />
     <Member Name="Reset" Datatype="Bool" />
+    <Member Name="Start" Datatype="Bool" />
   </Section>
   <Section Name="Output">
     <Member Name="Valve_106Q6" Datatype="Bool" />
@@ -24,7 +25,13 @@
     <Member Name="Reset_Safety_150K1" Datatype="Bool" />
   </Section>
   <Section Name="InOut" />
-  <Section Name="Static" />
+  <Section Name="Static">
+    <Member Name="Steps_EmergencyStop" Datatype="Int" />
+    <Member Name="Steps_Pause" Datatype="Int" />
+    <Member Name="Steps_Main" Datatype="Int" />
+    <Member Name="Steps_Processing" Datatype="Int" />
+    <Member Name="Steps_Placement" Datatype="Int" />
+  </Section>
 </Sections></Interface>
       <Name>Projekt2B_RobotGrinder_DB</Name>
       <Namespace />

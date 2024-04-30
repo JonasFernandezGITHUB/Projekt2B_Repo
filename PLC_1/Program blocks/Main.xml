@@ -117,6 +117,7 @@
         <Parameter Name="Sensor_102B5" Section="Input" Type="Bool" />
         <Parameter Name="Sensor_102B6" Section="Input" Type="Bool" />
         <Parameter Name="Reset" Section="Input" Type="Bool" />
+        <Parameter Name="Start" Section="Input" Type="Bool" />
         <Parameter Name="Valve_106Q6" Section="Output" Type="Bool" />
         <Parameter Name="Motor_4Q3" Section="Output" Type="Bool" />
         <Parameter Name="Motor_4Q5" Section="Output" Type="Bool" />
@@ -127,85 +128,89 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="42">
+    <Wire UId="43">
       <Powerrail />
       <NameCon UId="32" Name="en" />
     </Wire>
-    <Wire UId="43">
+    <Wire UId="44">
       <IdentCon UId="21" />
       <NameCon UId="32" Name="Emergency_Stop_Signal" />
     </Wire>
-    <Wire UId="44">
+    <Wire UId="45">
       <IdentCon UId="22" />
       <NameCon UId="32" Name="Reset" />
     </Wire>
-    <Wire UId="45">
+    <Wire UId="46">
       <NameCon UId="32" Name="eno" />
       <NameCon UId="33" Name="in" />
     </Wire>
-    <Wire UId="46">
+    <Wire UId="47">
       <NameCon UId="32" Name="Output" />
       <IdentCon UId="23" />
     </Wire>
-    <Wire UId="47">
+    <Wire UId="48">
       <IdentCon UId="24" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="48">
+    <Wire UId="49">
       <NameCon UId="33" Name="out" />
       <NameCon UId="34" Name="en" />
     </Wire>
-    <Wire UId="49">
+    <Wire UId="50">
       <IdentCon UId="25" />
       <NameCon UId="34" Name="Emergency_Stop_Status_150K1" />
     </Wire>
-    <Wire UId="50">
+    <Wire UId="51">
       <IdentCon UId="26" />
       <NameCon UId="34" Name="Sensor_102B2" />
     </Wire>
-    <Wire UId="51">
+    <Wire UId="52">
       <IdentCon UId="27" />
       <NameCon UId="34" Name="Sensor_102B3" />
     </Wire>
-    <Wire UId="52">
+    <Wire UId="53">
       <IdentCon UId="28" />
       <NameCon UId="34" Name="Sensor_102B4" />
     </Wire>
-    <Wire UId="53">
+    <Wire UId="54">
       <IdentCon UId="29" />
       <NameCon UId="34" Name="Sensor_102B5" />
     </Wire>
-    <Wire UId="54">
+    <Wire UId="55">
       <IdentCon UId="30" />
       <NameCon UId="34" Name="Sensor_102B6" />
     </Wire>
-    <Wire UId="55">
+    <Wire UId="56">
       <IdentCon UId="31" />
       <NameCon UId="34" Name="Reset" />
     </Wire>
-    <Wire UId="56">
+    <Wire UId="57">
       <NameCon UId="34" Name="Valve_106Q6" />
       <OpenCon UId="36" />
     </Wire>
-    <Wire UId="57">
+    <Wire UId="58">
       <NameCon UId="34" Name="Motor_4Q3" />
       <OpenCon UId="37" />
     </Wire>
-    <Wire UId="58">
+    <Wire UId="59">
       <NameCon UId="34" Name="Motor_4Q5" />
       <OpenCon UId="38" />
     </Wire>
-    <Wire UId="59">
+    <Wire UId="60">
       <NameCon UId="34" Name="Motor_6Q1" />
       <OpenCon UId="39" />
     </Wire>
-    <Wire UId="60">
+    <Wire UId="61">
       <NameCon UId="34" Name="Motor_6Q3" />
       <OpenCon UId="40" />
     </Wire>
-    <Wire UId="61">
+    <Wire UId="62">
       <NameCon UId="34" Name="Reset_Safety_150K1" />
       <OpenCon UId="41" />
+    </Wire>
+    <Wire UId="63">
+      <OpenCon UId="42" />
+      <NameCon UId="34" Name="Start" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

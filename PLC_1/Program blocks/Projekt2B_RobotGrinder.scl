@@ -1,0 +1,66 @@
+﻿FUNCTION_BLOCK "Projekt2B_RobotGrinder"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Emergency_Stop_Status_150K1 : Bool;   // Emergency stop signal from 150K1
+      Sensor_102B2 : Bool;   // Sensor on conveyor
+      Sensor_102B3 : Bool;   // Sensor on conveyor
+      Sensor_102B4 : Bool;   // Sensor on conveyor
+      Sensor_102B5 : Bool;   // Sensor paint level
+      Sensor_102B6 : Bool;   // Sensor paint level
+      Reset : Bool;   // HMI reset button signal
+      Start : Bool;   // HMI start button signal
+   END_VAR
+
+   VAR_OUTPUT 
+      Valve_106Q6 : Bool;
+      Motor_4Q3 : Bool;
+      Motor_4Q5 : Bool;
+      Motor_6Q1 : Bool;
+      Motor_6Q3 : Bool;
+      Reset_Safety_150K1 : Bool;
+   END_VAR
+
+   VAR 
+      Steps_EmergencyStop : Int;   // Steps used in the Emergency stop sequence
+      Steps_Pause : Int;   // Steps used in the pause sequence
+      Steps_Main : Int;   // Steps used in the main sequence
+      Steps_Processing : Int;   // Steps used in the processing sequence
+      Steps_Placement : Int;   // Steps used in the placement sequence
+   END_VAR
+
+
+BEGIN
+	REGION Idle
+	    
+	    
+	    
+	END_REGION
+	
+	REGION Execute
+	    
+	    
+	    
+	END_REGION
+	
+	REGION Complete
+	    
+	    
+	    
+	END_REGION
+	
+	REGION Suspended
+	    
+	    
+	    
+	END_REGION
+	
+	REGION Aborted
+	    
+	    
+	    
+	END_REGION
+	
+	
+END_FUNCTION_BLOCK
+

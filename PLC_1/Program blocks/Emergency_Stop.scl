@@ -12,5 +12,12 @@ VERSION : 0.1
 
 
 BEGIN
+	IF #Emergency_Stop_Signal = TRUE THEN
+	    #Output := TRUE;
+	END_IF;
+	    
+	IF #Reset = TRUE AND #Emergency_Stop_Signal = FALSE THEN
+	    #Output := FALSE;
+	END_IF;
 END_FUNCTION
 

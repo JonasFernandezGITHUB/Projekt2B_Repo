@@ -284,7 +284,7 @@
               <MultilingualTextItem ID="2D" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Emergency status. 0 = OK, 1 = Emergency</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -303,7 +303,7 @@
               <MultilingualTextItem ID="30" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Emergency signal from 150K1</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -322,7 +322,7 @@
               <MultilingualTextItem ID="33" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Sensor on conveyor - Front</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -341,7 +341,7 @@
               <MultilingualTextItem ID="36" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Sensor on conveyor - Middle</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -360,7 +360,7 @@
               <MultilingualTextItem ID="39" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Sensor on conveyor - Back</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -379,7 +379,7 @@
               <MultilingualTextItem ID="3C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Paint level sensor - High</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -398,7 +398,7 @@
               <MultilingualTextItem ID="3F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Paint level sensor - Low</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -417,7 +417,7 @@
               <MultilingualTextItem ID="42" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Paint dispenser valve</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -436,7 +436,7 @@
               <MultilingualTextItem ID="45" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Contactor for motor - Grinder</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -455,7 +455,7 @@
               <MultilingualTextItem ID="48" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Contactor for motor - Paint</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -474,7 +474,7 @@
               <MultilingualTextItem ID="4B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Contactor for motor - Ventilation</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -493,7 +493,7 @@
               <MultilingualTextItem ID="4E" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Contactor for motor - Vacuum</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -512,7 +512,7 @@
               <MultilingualTextItem ID="51" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Signal to 150K1 for emergency reset</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -531,7 +531,7 @@
               <MultilingualTextItem ID="54" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>HMI button signal - Start</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -550,7 +550,7 @@
               <MultilingualTextItem ID="57" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>HMI button signal - Pause</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -569,7 +569,7 @@
               <MultilingualTextItem ID="5A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>HMI button signal - Reset</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
