@@ -1,0 +1,8 @@
+﻿FUNCTION_BLOCK "Projekt_2B_Robotgrinder"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	// Jonas er en hingst-adonis
+END_FUNCTION_BLOCK
+
