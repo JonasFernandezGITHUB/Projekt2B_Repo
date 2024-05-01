@@ -8,6 +8,7 @@
     <Member Name="X" Datatype="Real" />
     <Member Name="Y" Datatype="Real" />
     <Member Name="Z" Datatype="Real" />
+    <Member Name="Mode" Datatype="Int" />
   </Section>
 </Sections></Interface>
       <Name>XYZ_Coordinates</Name>
