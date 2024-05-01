@@ -14,7 +14,9 @@
     <Member Name="Motor_4Q5" Datatype="Bool" />
   </Section>
   <Section Name="InOut" />
-  <Section Name="Static" />
+  <Section Name="Static">
+    <Member Name="Motor_Control" Datatype="Bool" />
+  </Section>
   <Section Name="Temp" />
   <Section Name="Constant" />
 </Sections></Interface>
@@ -53,12 +55,22 @@
     </Access>
     <Access Scope="LocalVariable" UId="23">
       <Symbol>
+        <Component Name="Motor_Control" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Motor_Control" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
         <Component Name="Motor_4Q5" />
       </Symbol>
     </Access>
-    <Call UId="24">
+    <Call UId="26">
       <CallInfo Name="OnOff_Regulator" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="25">
+        <Instance Scope="GlobalVariable" UId="27">
           <Component Name="OnOff_Regulator_DB" />
         </Instance>
         <Parameter Name="Tank_Full" Section="Input" Type="Bool" />
@@ -66,23 +78,41 @@
         <Parameter Name="Paint_Pump" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
+    <Call UId="28">
+      <CallInfo Name="Motor_OnOff" BlockType="FC">
+        <Parameter Name="Motor_On" Section="Input" Type="Bool" />
+        <Parameter Name="Motor_Start" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
   </Parts>
   <Wires>
-    <Wire UId="26">
-      <Powerrail />
-      <NameCon UId="24" Name="en" />
-    </Wire>
-    <Wire UId="27">
-      <IdentCon UId="21" />
-      <NameCon UId="24" Name="Tank_Full" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="Tank_Low" />
-    </Wire>
     <Wire UId="29">
-      <NameCon UId="24" Name="Paint_Pump" />
+      <Powerrail />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="Tank_Full" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="Tank_Low" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="eno" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <NameCon UId="26" Name="Paint_Pump" />
       <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="Motor_On" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="28" Name="Motor_Start" />
+      <IdentCon UId="25" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -94,7 +124,8 @@
               <MultilingualTextItem ID="5" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>V 0.1.0
+                  <Text>V 0.1.1 Updated connection for motor
+V 0.1.0 Preliminary sketch
 Connection for OnOff_regulator</Text>
                 </AttributeList>
               </MultilingualTextItem>
@@ -114,7 +145,40 @@ Connection for OnOff_regulator</Text>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource />
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Open_Valve" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Valve_106Q6" />
+      </Symbol>
+    </Access>
+    <Call UId="23">
+      <CallInfo Name="Valve_OpenClose" BlockType="FC">
+        <Parameter Name="Valve" Section="Input" Type="Bool" />
+        <Parameter Name="Valve_Open" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="24">
+      <Powerrail />
+      <NameCon UId="23" Name="en" />
+    </Wire>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="Valve" />
+    </Wire>
+    <Wire UId="26">
+      <NameCon UId="23" Name="Valve_Open" />
+      <IdentCon UId="22" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -123,7 +187,8 @@ Connection for OnOff_regulator</Text>
               <MultilingualTextItem ID="A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>V 0.1.0 Added Valve Open
+Connection for Valve_OpenClose</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -140,9 +205,37 @@ Connection for OnOff_regulator</Text>
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="D" CompositionName="Title">
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
         <ObjectList>
-          <MultilingualTextItem ID="E" CompositionName="Items">
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
