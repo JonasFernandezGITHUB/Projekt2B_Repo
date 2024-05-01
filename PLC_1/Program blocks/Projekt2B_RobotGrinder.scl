@@ -32,7 +32,7 @@ VERSION : 0.1
 
 BEGIN
 	REGION Idle
-	    
+	    //Anders er sej, anders er gud, test er for tabere.
 	    
 	    
 	END_REGION
