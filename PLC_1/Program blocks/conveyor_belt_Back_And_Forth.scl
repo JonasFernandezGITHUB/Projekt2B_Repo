@@ -1,0 +1,32 @@
+﻿FUNCTION "conveyor_belt_Back_And_Forth" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Input_conveyor_belt_forward : Bool;
+      Input_conveyor_belt_back : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      "Output_Conveyor Belt Forward" : Bool;
+      "Output_Conveyor Belt Back" : Bool;
+      "Output_Conveyor Belt Ready" : Bool;
+   END_VAR
+
+
+BEGIN
+	//V0.0.1 
+	
+	#"Output_Conveyor Belt Forward" := 0;
+	#"Output_Conveyor Belt Back" := 0;
+	#"Output_Conveyor Belt Ready" := 0;
+	
+	IF #Input_conveyor_belt_forward THEN
+	    #"Output_Conveyor Belt Forward" := 1;
+	    #"Output_Conveyor Belt Ready" := 1;
+	ELSIF #Input_conveyor_belt_back THEN
+	    #"Output_Conveyor Belt Back" := 1;
+	    #"Output_Conveyor Belt Ready" := 1;
+	END_IF;
+	
+END_FUNCTION
+
