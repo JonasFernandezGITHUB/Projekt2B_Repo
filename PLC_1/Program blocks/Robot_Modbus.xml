@@ -71,8 +71,8 @@
         </Section>
       </Sections>
     </Member>
-    <Member Name="ReceiveData" Datatype="Array[0..5] of Int" />
-    <Member Name="SendData" Datatype="Array[0..5] of Int" />
+    <Member Name="ReceiveData" Datatype="Array[0..15] of Bool" />
+    <Member Name="SendData" Datatype="Array[0..15] of Bool" />
   </Section>
   <Section Name="Temp" />
   <Section Name="Constant" />
@@ -91,7 +91,8 @@
           <MultilingualTextItem ID="2" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
-              <Text />
+              <Text>V.0.1.1 - Updated UR robot array address
+V.0.1.0 - Created function block</Text>
             </AttributeList>
           </MultilingualTextItem>
         </ObjectList>
@@ -125,7 +126,7 @@
     <Access Scope="LiteralConstant" UId="25">
       <Constant>
         <ConstantType>UInt</ConstantType>
-        <ConstantValue>6</ConstantValue>
+        <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LocalVariable" UId="26">
@@ -163,7 +164,7 @@
     <Access Scope="LiteralConstant" UId="32">
       <Constant>
         <ConstantType>UInt</ConstantType>
-        <ConstantValue>6</ConstantValue>
+        <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LocalVariable" UId="33">
@@ -379,34 +380,39 @@
         <Component Name="Proces_Item" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="22">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="23">
+    <Access Scope="LocalVariable" UId="22">
       <Symbol>
         <Component Name="SendData" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>0</ConstantValue>
+              <ConstantValue>8</ConstantValue>
             </Constant>
           </Access>
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="24">
+    <Access Scope="LocalVariable" UId="23">
       <Symbol>
-        <Component Name="Proces_Item" />
+        <Component Name="Place_Item_Conveyor" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="25">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="SendData" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>9</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Place_Item_Storage" />
+      </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="26">
       <Symbol>
@@ -414,7 +420,7 @@
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>0</ConstantValue>
+              <ConstantValue>10</ConstantValue>
             </Constant>
           </Access>
         </Component>
@@ -422,322 +428,85 @@
     </Access>
     <Access Scope="LocalVariable" UId="27">
       <Symbol>
-        <Component Name="Place_Item_Conveyor" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="28">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="29">
-      <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>1</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="30">
-      <Symbol>
-        <Component Name="Place_Item_Conveyor" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="31">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="32">
-      <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>1</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="33">
-      <Symbol>
-        <Component Name="Place_Item_Storage" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="34">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="35">
-      <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>2</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="36">
-      <Symbol>
-        <Component Name="Place_Item_Storage" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="37">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="38">
-      <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>2</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="39">
-      <Symbol>
         <Component Name="Scrap_Item" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="40">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="41">
+    <Access Scope="LocalVariable" UId="28">
       <Symbol>
         <Component Name="SendData" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>3</ConstantValue>
+              <ConstantValue>11</ConstantValue>
             </Constant>
           </Access>
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="42">
-      <Symbol>
-        <Component Name="Scrap_Item" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="43">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="44">
-      <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>3</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="45" />
-    <Part Name="Move" UId="46" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="47">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Move" UId="48" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="49" />
-    <Part Name="Move" UId="50" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="51">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Move" UId="52" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="53" />
-    <Part Name="Move" UId="54" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="55">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Move" UId="56" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="57" />
-    <Part Name="Move" UId="58" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
-    <Part Name="Contact" UId="59">
-      <Negated Name="operand" />
-    </Part>
-    <Part Name="Move" UId="60" DisabledENO="true">
-      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="29" />
+    <Part Name="Coil" UId="30" />
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Contact" UId="33" />
+    <Part Name="Coil" UId="34" />
+    <Part Name="Contact" UId="35" />
+    <Part Name="Coil" UId="36" />
   </Parts>
   <Wires>
-    <Wire UId="61">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="45" Name="in" />
-      <NameCon UId="47" Name="in" />
-      <NameCon UId="49" Name="in" />
-      <NameCon UId="51" Name="in" />
-      <NameCon UId="53" Name="in" />
-      <NameCon UId="55" Name="in" />
-      <NameCon UId="57" Name="in" />
-      <NameCon UId="59" Name="in" />
+      <NameCon UId="29" Name="in" />
+      <NameCon UId="31" Name="in" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
     </Wire>
-    <Wire UId="62">
+    <Wire UId="38">
       <IdentCon UId="21" />
-      <NameCon UId="45" Name="operand" />
+      <NameCon UId="29" Name="operand" />
     </Wire>
-    <Wire UId="63">
-      <NameCon UId="45" Name="out" />
-      <NameCon UId="46" Name="en" />
+    <Wire UId="39">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
     </Wire>
-    <Wire UId="64">
+    <Wire UId="40">
       <IdentCon UId="22" />
-      <NameCon UId="46" Name="in" />
+      <NameCon UId="30" Name="operand" />
     </Wire>
-    <Wire UId="65">
-      <NameCon UId="46" Name="out1" />
+    <Wire UId="41">
       <IdentCon UId="23" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
-    <Wire UId="66">
+    <Wire UId="42">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="43">
       <IdentCon UId="24" />
-      <NameCon UId="47" Name="operand" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="67">
-      <NameCon UId="47" Name="out" />
-      <NameCon UId="48" Name="en" />
-    </Wire>
-    <Wire UId="68">
+    <Wire UId="44">
       <IdentCon UId="25" />
-      <NameCon UId="48" Name="in" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="69">
-      <NameCon UId="48" Name="out1" />
+    <Wire UId="45">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="46">
       <IdentCon UId="26" />
+      <NameCon UId="34" Name="operand" />
     </Wire>
-    <Wire UId="70">
+    <Wire UId="47">
       <IdentCon UId="27" />
-      <NameCon UId="49" Name="operand" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="71">
-      <NameCon UId="49" Name="out" />
-      <NameCon UId="50" Name="en" />
+    <Wire UId="48">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in" />
     </Wire>
-    <Wire UId="72">
+    <Wire UId="49">
       <IdentCon UId="28" />
-      <NameCon UId="50" Name="in" />
-    </Wire>
-    <Wire UId="73">
-      <NameCon UId="50" Name="out1" />
-      <IdentCon UId="29" />
-    </Wire>
-    <Wire UId="74">
-      <IdentCon UId="30" />
-      <NameCon UId="51" Name="operand" />
-    </Wire>
-    <Wire UId="75">
-      <NameCon UId="51" Name="out" />
-      <NameCon UId="52" Name="en" />
-    </Wire>
-    <Wire UId="76">
-      <IdentCon UId="31" />
-      <NameCon UId="52" Name="in" />
-    </Wire>
-    <Wire UId="77">
-      <NameCon UId="52" Name="out1" />
-      <IdentCon UId="32" />
-    </Wire>
-    <Wire UId="78">
-      <IdentCon UId="33" />
-      <NameCon UId="53" Name="operand" />
-    </Wire>
-    <Wire UId="79">
-      <NameCon UId="53" Name="out" />
-      <NameCon UId="54" Name="en" />
-    </Wire>
-    <Wire UId="80">
-      <IdentCon UId="34" />
-      <NameCon UId="54" Name="in" />
-    </Wire>
-    <Wire UId="81">
-      <NameCon UId="54" Name="out1" />
-      <IdentCon UId="35" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="36" />
-      <NameCon UId="55" Name="operand" />
-    </Wire>
-    <Wire UId="83">
-      <NameCon UId="55" Name="out" />
-      <NameCon UId="56" Name="en" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="37" />
-      <NameCon UId="56" Name="in" />
-    </Wire>
-    <Wire UId="85">
-      <NameCon UId="56" Name="out1" />
-      <IdentCon UId="38" />
-    </Wire>
-    <Wire UId="86">
-      <IdentCon UId="39" />
-      <NameCon UId="57" Name="operand" />
-    </Wire>
-    <Wire UId="87">
-      <NameCon UId="57" Name="out" />
-      <NameCon UId="58" Name="en" />
-    </Wire>
-    <Wire UId="88">
-      <IdentCon UId="40" />
-      <NameCon UId="58" Name="in" />
-    </Wire>
-    <Wire UId="89">
-      <NameCon UId="58" Name="out1" />
-      <IdentCon UId="41" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="42" />
-      <NameCon UId="59" Name="operand" />
-    </Wire>
-    <Wire UId="91">
-      <NameCon UId="59" Name="out" />
-      <NameCon UId="60" Name="en" />
-    </Wire>
-    <Wire UId="92">
-      <IdentCon UId="43" />
-      <NameCon UId="60" Name="in" />
-    </Wire>
-    <Wire UId="93">
-      <NameCon UId="60" Name="out1" />
-      <IdentCon UId="44" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -782,18 +551,12 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="22">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="23">
+    <Access Scope="LocalVariable" UId="22">
       <Symbol>
         <Component Name="Working" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="24">
+    <Access Scope="LocalVariable" UId="23">
       <Symbol>
         <Component Name="ReceiveData" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -805,18 +568,12 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="25">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="26">
+    <Access Scope="LocalVariable" UId="24">
       <Symbol>
         <Component Name="Done" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="25">
       <Symbol>
         <Component Name="ReceiveData" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -828,18 +585,12 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="28">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="29">
+    <Access Scope="LocalVariable" UId="26">
       <Symbol>
         <Component Name="Error" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="30">
+    <Access Scope="LocalVariable" UId="27">
       <Symbol>
         <Component Name="ReceiveData" AccessModifier="Array">
           <Access Scope="LiteralConstant">
@@ -851,105 +602,75 @@
         </Component>
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="31">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="32">
+    <Access Scope="LocalVariable" UId="28">
       <Symbol>
         <Component Name="Reached_Coordinates" />
       </Symbol>
     </Access>
-    <Part Name="Eq" UId="33">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="29" />
+    <Part Name="Coil" UId="30" />
+    <Part Name="Contact" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Contact" UId="33" />
     <Part Name="Coil" UId="34" />
-    <Part Name="Eq" UId="35">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
+    <Part Name="Contact" UId="35" />
     <Part Name="Coil" UId="36" />
-    <Part Name="Eq" UId="37">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="38" />
-    <Part Name="Eq" UId="39">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="Coil" UId="40" />
   </Parts>
   <Wires>
-    <Wire UId="41">
+    <Wire UId="37">
       <Powerrail />
-      <NameCon UId="33" Name="pre" />
-      <NameCon UId="35" Name="pre" />
-      <NameCon UId="37" Name="pre" />
-      <NameCon UId="39" Name="pre" />
+      <NameCon UId="29" Name="in" />
+      <NameCon UId="31" Name="in" />
+      <NameCon UId="33" Name="in" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="22" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="23" />
+      <NameCon UId="31" Name="operand" />
     </Wire>
     <Wire UId="42">
-      <IdentCon UId="21" />
-      <NameCon UId="33" Name="in1" />
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
     </Wire>
     <Wire UId="43">
-      <IdentCon UId="22" />
-      <NameCon UId="33" Name="in2" />
+      <IdentCon UId="24" />
+      <NameCon UId="32" Name="operand" />
     </Wire>
     <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="45">
       <NameCon UId="33" Name="out" />
       <NameCon UId="34" Name="in" />
     </Wire>
-    <Wire UId="45">
-      <IdentCon UId="23" />
+    <Wire UId="46">
+      <IdentCon UId="26" />
       <NameCon UId="34" Name="operand" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="24" />
-      <NameCon UId="35" Name="in1" />
-    </Wire>
     <Wire UId="47">
-      <IdentCon UId="25" />
-      <NameCon UId="35" Name="in2" />
+      <IdentCon UId="27" />
+      <NameCon UId="35" Name="operand" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="26" />
-      <NameCon UId="36" Name="operand" />
-    </Wire>
-    <Wire UId="50">
-      <IdentCon UId="27" />
-      <NameCon UId="37" Name="in1" />
-    </Wire>
-    <Wire UId="51">
       <IdentCon UId="28" />
-      <NameCon UId="37" Name="in2" />
-    </Wire>
-    <Wire UId="52">
-      <NameCon UId="37" Name="out" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="29" />
-      <NameCon UId="38" Name="operand" />
-    </Wire>
-    <Wire UId="54">
-      <IdentCon UId="30" />
-      <NameCon UId="39" Name="in1" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="31" />
-      <NameCon UId="39" Name="in2" />
-    </Wire>
-    <Wire UId="56">
-      <NameCon UId="39" Name="out" />
-      <NameCon UId="40" Name="in" />
-    </Wire>
-    <Wire UId="57">
-      <IdentCon UId="32" />
-      <NameCon UId="40" Name="operand" />
+      <NameCon UId="36" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>Robot_Modbus</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Proces_Item" Datatype="Bool" />
+    <Member Name="Place_Item_Conveyor" Datatype="Bool" />
+    <Member Name="Place_Item_Storage" Datatype="Bool" />
+    <Member Name="Scrap_Item" Datatype="Bool" />
+    <Member Name="Speed_Transport" Datatype="Int" />
+    <Member Name="Speed_Grinding" Datatype="Int" />
+    <Member Name="Grinding_Coordinates" Datatype="Bool" />
+    <Member Name="Letter" Datatype="DB_ANY" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Working" Datatype="Bool" />
+    <Member Name="Done" Datatype="Bool" />
+    <Member Name="Error" Datatype="Bool" />
+    <Member Name="Reached_Coordinates" Datatype="Bool" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="DISCONNECT" Datatype="Bool" />
+    <Member Name="Address" Datatype="TCON_IP_v4" Version="1.0" />
+    <Member Name="ReceiveData" Datatype="Array[0..15] of Bool" />
+    <Member Name="SendData" Datatype="Array[0..15] of Bool" />
+  </Section>
+</Sections></Interface>
+      <Name>Robot_Modbus_DB</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>
