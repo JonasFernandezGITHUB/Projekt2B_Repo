@@ -5,7 +5,7 @@
     <AttributeList>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Static">
-    <Member Name="Coordinates" Datatype="Array[0..5] of &quot;XYZ_Coordinates&quot;">
+    <Member Name="Coordinates" Datatype="Array[0..15] of &quot;XYZ_Coordinates&quot;">
       <Sections>
         <Section Name="None">
           <Member Name="X" Datatype="Real">
