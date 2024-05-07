@@ -8,7 +8,7 @@
     <Member Name="Start_Feeder" Datatype="Bool" />
   </Section>
   <Section Name="Output">
-    <Member Name="Feeder_Ready" Datatype="Bool" />
+    <Member Name="Feeder_Active" Datatype="Bool" />
   </Section>
   <Section Name="InOut" />
   <Section Name="Static" />
@@ -19,7 +19,7 @@
       <MemoryReserve>100</MemoryReserve>
       <Name>FC_Modbus_Arduino</Name>
       <Namespace />
-      <Number>1</Number>
+      <Number>6</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
     </AttributeList>
@@ -38,14 +38,35 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
   <Parts>
-    <Call UId="21">
-      <CallInfo Name="FC_Modbus_ArduinoComms" BlockType="FC" />
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start_Feeder" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Feeder_Active" />
+      </Symbol>
+    </Access>
+    <Call UId="23">
+      <CallInfo Name="FC_Modbus_ArduinoComms" BlockType="FC">
+        <Parameter Name="Start_Feeder" Section="Input" Type="Bool" />
+        <Parameter Name="Feeder_Active" Section="Output" Type="Bool" />
+      </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="22">
+    <Wire UId="24">
       <Powerrail />
-      <NameCon UId="21" Name="en" />
+      <NameCon UId="23" Name="en" />
+    </Wire>
+    <Wire UId="25">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="Start_Feeder" />
+    </Wire>
+    <Wire UId="26">
+      <NameCon UId="23" Name="Feeder_Active" />
+      <IdentCon UId="22" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -57,7 +78,8 @@
               <MultilingualTextItem ID="5" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Feeder.
+Gives modbus signal to Arduino Address to initiate feeding process, and tracks if feeder has been started.</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -67,44 +89,16 @@
               <MultilingualTextItem ID="7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Feeder v0.1</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource />
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
+      <MultilingualText ID="8" CompositionName="Title">
         <ObjectList>
-          <MultilingualText ID="9" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="A" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="B" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <MultilingualText ID="D" CompositionName="Title">
-        <ObjectList>
-          <MultilingualTextItem ID="E" CompositionName="Items">
+          <MultilingualTextItem ID="9" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
