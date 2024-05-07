@@ -22,7 +22,7 @@
       <MemoryLayout>Standard</MemoryLayout>
       <Name>DB_Arduino_Data</Name>
       <Namespace />
-      <Number>3</Number>
+      <Number>11</Number>
       <ProgrammingLanguage>DB</ProgrammingLanguage>
     </AttributeList>
     <ObjectList>

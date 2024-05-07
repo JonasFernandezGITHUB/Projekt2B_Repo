@@ -44,59 +44,69 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="Emergency_Stop_Status_150K1" />
+        <Component Name="Input0" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="HMI_Reset" />
+        <Component Name="Input1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="Emergency_Stop_OK" />
+        <Component Name="Input2" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="24">
-      <Symbol>
-        <Component Name="Emergency_Stop_OK" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'ABC'</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="GlobalVariable" UId="25">
       <Symbol>
-        <Component Name="Emergency_Stop_Status_150K1" />
+        <Component Name="Output1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="26">
       <Symbol>
-        <Component Name="Sensor_102B2" />
+        <Component Name="Output0" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="27">
       <Symbol>
-        <Component Name="Sensor_102B3" />
+        <Component Name="Emergency_Stop_Status_150K1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="Sensor_102B4" />
+        <Component Name="HMI_Reset" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Sensor_102B5" />
+        <Component Name="Emergency_Stop_Status_150K1" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="30">
-      <Symbol>
-        <Component Name="Sensor_102B6" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="31">
-      <Symbol>
-        <Component Name="HMI_Reset" />
-      </Symbol>
-    </Access>
+    <Call UId="30">
+      <CallInfo Name="Robot_Modbus" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="31">
+          <Component Name="Robot_Modbus_DB" />
+        </Instance>
+        <Parameter Name="Proces_Item" Section="Input" Type="Bool" />
+        <Parameter Name="Place_Item_Conveyor" Section="Input" Type="Bool" />
+        <Parameter Name="Place_Item_Storage" Section="Input" Type="Bool" />
+        <Parameter Name="Scrap_Item" Section="Input" Type="Bool" />
+        <Parameter Name="Speed_Transport" Section="Input" Type="Int" />
+        <Parameter Name="Speed_Grinding" Section="Input" Type="Int" />
+        <Parameter Name="Grinding_Coordinates" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_String" Section="Input" Type="String" />
+        <Parameter Name="Working" Section="Output" Type="Bool" />
+        <Parameter Name="Done" Section="Output" Type="Bool" />
+        <Parameter Name="Error" Section="Output" Type="Bool" />
+        <Parameter Name="Reached_Coordinates" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
     <Call UId="32">
       <CallInfo Name="Emergency_Stop" BlockType="FC">
         <Parameter Name="Emergency_Stop_Signal" Section="Input" Type="Bool" />
@@ -104,11 +114,10 @@
         <Parameter Name="Output" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
-    <Part Name="Contact" UId="33" />
-    <Call UId="34">
-      <CallInfo Name="Projekt2B_RobotGrinder" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="35">
-          <Component Name="Projekt2B_RobotGrinder_DB" />
+    <Call UId="33">
+      <CallInfo Name="Projekt_2B_Robotgrinder" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="34">
+          <Component Name="Projekt_2B_Robotgrinder_DB" />
         </Instance>
         <Parameter Name="Emergency_Stop_Status_150K1" Section="Input" Type="Bool" />
         <Parameter Name="Sensor_102B2" Section="Input" Type="Bool" />
@@ -116,8 +125,13 @@
         <Parameter Name="Sensor_102B4" Section="Input" Type="Bool" />
         <Parameter Name="Sensor_102B5" Section="Input" Type="Bool" />
         <Parameter Name="Sensor_102B6" Section="Input" Type="Bool" />
-        <Parameter Name="Reset" Section="Input" Type="Bool" />
-        <Parameter Name="Start" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Start" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Pause" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Reset" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Start_1" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Pause_1" Section="Input" Type="Bool" />
+        <Parameter Name="HMI_Reset_1" Section="Input" Type="Bool" />
+        <Parameter Name="Pause_Process" Section="Input" Type="Bool" />
         <Parameter Name="Valve_106Q6" Section="Output" Type="Bool" />
         <Parameter Name="Motor_4Q3" Section="Output" Type="Bool" />
         <Parameter Name="Motor_4Q5" Section="Output" Type="Bool" />
@@ -128,89 +142,150 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="43">
+    <Wire UId="60">
       <Powerrail />
+      <NameCon UId="30" Name="en" />
       <NameCon UId="32" Name="en" />
     </Wire>
-    <Wire UId="44">
-      <IdentCon UId="21" />
-      <NameCon UId="32" Name="Emergency_Stop_Signal" />
-    </Wire>
-    <Wire UId="45">
-      <IdentCon UId="22" />
-      <NameCon UId="32" Name="Reset" />
-    </Wire>
-    <Wire UId="46">
-      <NameCon UId="32" Name="eno" />
-      <NameCon UId="33" Name="in" />
-    </Wire>
-    <Wire UId="47">
-      <NameCon UId="32" Name="Output" />
-      <IdentCon UId="23" />
-    </Wire>
-    <Wire UId="48">
-      <IdentCon UId="24" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="49">
-      <NameCon UId="33" Name="out" />
-      <NameCon UId="34" Name="en" />
-    </Wire>
-    <Wire UId="50">
-      <IdentCon UId="25" />
-      <NameCon UId="34" Name="Emergency_Stop_Status_150K1" />
-    </Wire>
-    <Wire UId="51">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="Sensor_102B2" />
-    </Wire>
-    <Wire UId="52">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="Sensor_102B3" />
-    </Wire>
-    <Wire UId="53">
-      <IdentCon UId="28" />
-      <NameCon UId="34" Name="Sensor_102B4" />
-    </Wire>
-    <Wire UId="54">
-      <IdentCon UId="29" />
-      <NameCon UId="34" Name="Sensor_102B5" />
-    </Wire>
-    <Wire UId="55">
-      <IdentCon UId="30" />
-      <NameCon UId="34" Name="Sensor_102B6" />
-    </Wire>
-    <Wire UId="56">
-      <IdentCon UId="31" />
-      <NameCon UId="34" Name="Reset" />
-    </Wire>
-    <Wire UId="57">
-      <NameCon UId="34" Name="Valve_106Q6" />
-      <OpenCon UId="36" />
-    </Wire>
-    <Wire UId="58">
-      <NameCon UId="34" Name="Motor_4Q3" />
-      <OpenCon UId="37" />
-    </Wire>
-    <Wire UId="59">
-      <NameCon UId="34" Name="Motor_4Q5" />
-      <OpenCon UId="38" />
-    </Wire>
-    <Wire UId="60">
-      <NameCon UId="34" Name="Motor_6Q1" />
-      <OpenCon UId="39" />
-    </Wire>
     <Wire UId="61">
-      <NameCon UId="34" Name="Motor_6Q3" />
-      <OpenCon UId="40" />
+      <IdentCon UId="21" />
+      <NameCon UId="30" Name="Proces_Item" />
     </Wire>
     <Wire UId="62">
-      <NameCon UId="34" Name="Reset_Safety_150K1" />
-      <OpenCon UId="41" />
+      <IdentCon UId="22" />
+      <NameCon UId="30" Name="Place_Item_Conveyor" />
     </Wire>
     <Wire UId="63">
+      <IdentCon UId="23" />
+      <NameCon UId="30" Name="Place_Item_Storage" />
+    </Wire>
+    <Wire UId="64">
+      <OpenCon UId="35" />
+      <NameCon UId="30" Name="Scrap_Item" />
+    </Wire>
+    <Wire UId="65">
+      <OpenCon UId="36" />
+      <NameCon UId="30" Name="Speed_Transport" />
+    </Wire>
+    <Wire UId="66">
+      <OpenCon UId="37" />
+      <NameCon UId="30" Name="Speed_Grinding" />
+    </Wire>
+    <Wire UId="67">
+      <OpenCon UId="38" />
+      <NameCon UId="30" Name="Grinding_Coordinates" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="HMI_String" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="30" Name="Working" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="70">
+      <NameCon UId="30" Name="Done" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="30" Name="Error" />
+      <OpenCon UId="39" />
+    </Wire>
+    <Wire UId="72">
+      <NameCon UId="30" Name="Reached_Coordinates" />
+      <OpenCon UId="40" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="27" />
+      <NameCon UId="32" Name="Emergency_Stop_Signal" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="28" />
+      <NameCon UId="32" Name="Reset" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="32" Name="eno" />
+      <NameCon UId="33" Name="en" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="32" Name="Output" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="41" />
+      <NameCon UId="33" Name="Emergency_Stop_Status_150K1" />
+    </Wire>
+    <Wire UId="78">
       <OpenCon UId="42" />
-      <NameCon UId="34" Name="Start" />
+      <NameCon UId="33" Name="Sensor_102B2" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="43" />
+      <NameCon UId="33" Name="Sensor_102B3" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="44" />
+      <NameCon UId="33" Name="Sensor_102B4" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="45" />
+      <NameCon UId="33" Name="Sensor_102B5" />
+    </Wire>
+    <Wire UId="82">
+      <OpenCon UId="46" />
+      <NameCon UId="33" Name="Sensor_102B6" />
+    </Wire>
+    <Wire UId="83">
+      <OpenCon UId="47" />
+      <NameCon UId="33" Name="HMI_Start" />
+    </Wire>
+    <Wire UId="84">
+      <OpenCon UId="48" />
+      <NameCon UId="33" Name="HMI_Pause" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="49" />
+      <NameCon UId="33" Name="HMI_Reset" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="50" />
+      <NameCon UId="33" Name="HMI_Start_1" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="51" />
+      <NameCon UId="33" Name="HMI_Pause_1" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="52" />
+      <NameCon UId="33" Name="HMI_Reset_1" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="53" />
+      <NameCon UId="33" Name="Pause_Process" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="33" Name="Valve_106Q6" />
+      <OpenCon UId="54" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="33" Name="Motor_4Q3" />
+      <OpenCon UId="55" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="33" Name="Motor_4Q5" />
+      <OpenCon UId="56" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="33" Name="Motor_6Q1" />
+      <OpenCon UId="57" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="33" Name="Motor_6Q3" />
+      <OpenCon UId="58" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="33" Name="Reset_Safety_150K1" />
+      <OpenCon UId="59" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -241,40 +316,7 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
-  <Parts>
-    <Access Scope="GlobalVariable" UId="21">
-      <Symbol>
-        <Component Name="AlwaysTRUE" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
-      <Symbol>
-        <Component Name="Valve_106Q6" />
-      </Symbol>
-    </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
-  </Parts>
-  <Wires>
-    <Wire UId="25">
-      <Powerrail />
-      <NameCon UId="23" Name="in" />
-    </Wire>
-    <Wire UId="26">
-      <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
-    </Wire>
-    <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
-    </Wire>
-    <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
+          <NetworkSource />
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -283,7 +325,7 @@
               <MultilingualTextItem ID="A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>Anders er ikke sej</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -293,34 +335,6 @@
               <MultilingualTextItem ID="C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>Paint dispenser valve</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Blocks.CompileUnit>
-      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
-        <AttributeList>
-          <NetworkSource />
-          <ProgrammingLanguage>LAD</ProgrammingLanguage>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="E" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-          <MultilingualText ID="10" CompositionName="Title">
-            <ObjectList>
-              <MultilingualTextItem ID="11" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
@@ -328,9 +342,9 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="12" CompositionName="Title">
+      <MultilingualText ID="D" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="13" CompositionName="Items">
+          <MultilingualTextItem ID="E" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text>"Main Program Sweep (Cycle)"</Text>

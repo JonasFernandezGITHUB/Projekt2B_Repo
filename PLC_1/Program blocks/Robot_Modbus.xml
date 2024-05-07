@@ -16,7 +16,7 @@
       <StartValue>10</StartValue>
     </Member>
     <Member Name="Grinding_Coordinates" Datatype="Bool" />
-    <Member Name="Letter" Datatype="DB_ANY" />
+    <Member Name="HMI_String" Datatype="String" />
   </Section>
   <Section Name="Output">
     <Member Name="Working" Datatype="Bool" />
@@ -71,8 +71,235 @@
         </Section>
       </Sections>
     </Member>
-    <Member Name="ReceiveData" Datatype="Array[0..15] of Bool" />
-    <Member Name="SendData" Datatype="Array[0..15] of Bool" />
+    <Member Name="Receive_Data" Datatype="Int" />
+    <Member Name="Send_Data" Datatype="Array[0..63] of Bool" />
+    <Member Name="Send_Coordinates" Datatype="Array[0..2] of Int" />
+    <Member Name="Letter_A" Datatype="Array[0..20] of &quot;XYZ_Coordinates&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="X" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>42</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>56</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>98</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>82</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>70</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>29</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>17</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>67</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>67</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>56</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>52</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>49</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>47</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>44</StartValue>
+            </Subelement>
+            <Subelement Path="18">
+              <StartValue>33</StartValue>
+            </Subelement>
+            <Subelement Path="19">
+              <StartValue>33</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="Y" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>100</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>100</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>30</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>30</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>41</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>41</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>69</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>82</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>90</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>80</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>70</StartValue>
+            </Subelement>
+            <Subelement Path="18">
+              <StartValue>41</StartValue>
+            </Subelement>
+            <Subelement Path="19">
+              <StartValue>41</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="Z" Datatype="Int">
+            <Subelement Path="1">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>0</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="18">
+              <StartValue>-1</StartValue>
+            </Subelement>
+            <Subelement Path="19">
+              <StartValue>0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="I" Datatype="Int">
+            <Subelement Path="14">
+              <StartValue>394</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>156</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>-122</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>-127</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="J" Datatype="Int">
+            <Subelement Path="14">
+              <StartValue>149</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>53</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>24</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>36</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Letter_Steps" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Rising_edge" Datatype="Bool" />
+    <Member Name="String_To_Letter_Array" Datatype="Array[0..16] of Char" />
+    <Member Name="String_Length" Datatype="Int" />
+    <Member Name="Currently_Processing" Datatype="Int" />
+    <Member Name="Send_Letter_A" Datatype="Bool" />
+    <Member Name="Send_Letter_B" Datatype="Bool" />
+    <Member Name="Send_Letter_C" Datatype="Bool" />
+    <Member Name="MB_Client_Mode" Datatype="Int" />
+    <Member Name="MB_Client_Modbus_Address" Datatype="Int" />
+    <Member Name="For_Loop_Counter" Datatype="Int" />
   </Section>
   <Section Name="Temp" />
   <Section Name="Constant" />
@@ -84,6 +311,778 @@
       <Number>1</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
+      <Supervisions><BlockTypeSupervisions xmlns="http://www.siemens.com/automation/Openness/SW/BlockTypeSupervisions/v3">
+  <BlockTypeSupervision Number="1" Type="Operand">
+    <SupervisedOperand Name="#DISCONNECT" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="2" Type="Operand">
+    <SupervisedOperand Name="#Static_1.ActiveEstablished" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="3" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[0]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="4" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[1]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="5" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[2]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="6" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[3]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="7" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[4]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="8" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[5]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="9" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[6]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="10" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[7]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="11" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[8]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="12" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[9]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="13" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[10]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="14" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[11]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="15" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[12]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="16" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[13]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="17" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[14]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="18" Type="Operand">
+    <SupervisedOperand Name="#ModbusData[15]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="19" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[0]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="20" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[1]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="21" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[2]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="22" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[3]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="23" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[4]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="24" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[5]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="25" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[6]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="26" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[7]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="27" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[8]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="28" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[9]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="29" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[10]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="30" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[11]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="31" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[12]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="32" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[13]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="33" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[14]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="34" Type="Operand">
+    <SupervisedOperand Name="#Send_Data[15]" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+  <BlockTypeSupervision Number="35" Type="Operand">
+    <SupervisedOperand Name="#Rising_edge" />
+    <SupervisedStatus>false</SupervisedStatus>
+    <DelayOperand Name="T#0ms" />
+    <Conditions>
+      <Condition>
+        <ConditionOperand Number="1" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="2" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+      <Condition>
+        <ConditionOperand Number="3" Name="" />
+        <TriggeringStatus>true</TriggeringStatus>
+      </Condition>
+    </Conditions>
+    <CategoryNumber>1</CategoryNumber>
+    <SubCategory1Number>0</SubCategory1Number>
+    <SubCategory2Number>0</SubCategory2Number>
+  </BlockTypeSupervision>
+</BlockTypeSupervisions></Supervisions>
     </AttributeList>
     <ObjectList>
       <MultilingualText ID="1" CompositionName="Comment">
@@ -103,246 +1102,464 @@ V.0.1.0 - Created function block</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="Clock_1Hz" />
+        <Component Name="Modbus_Cycle_Counter" />
+        <Component Name="CV" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="22">
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
       <Symbol>
-        <Component Name="DISCONNECT" />
+        <Component Name="AlwaysTRUE" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="23">
+    <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>USInt</ConstantType>
         <ConstantValue>116</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="24">
+    <Access Scope="LiteralConstant" UId="25">
       <Constant>
         <ConstantType>UDInt</ConstantType>
         <ConstantValue>129</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="25">
+    <Access Scope="LiteralConstant" UId="26">
       <Constant>
         <ConstantType>UInt</ConstantType>
         <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LocalVariable" UId="26">
+    <Access Scope="LocalVariable" UId="27">
       <Symbol>
-        <Component Name="SendData" />
+        <Component Name="Send_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="28">
       <Symbol>
         <Component Name="Address" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="28">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
-        <Component Name="Clock_1Hz" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="29">
-      <Symbol>
-        <Component Name="DISCONNECT" />
+        <Component Name="Modbus_Cycle_Counter" />
+        <Component Name="CV" />
       </Symbol>
     </Access>
     <Access Scope="LiteralConstant" UId="30">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="AlwaysTRUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="32">
       <Constant>
         <ConstantType>USInt</ConstantType>
         <ConstantValue>103</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="31">
+    <Access Scope="LiteralConstant" UId="33">
       <Constant>
         <ConstantType>UDInt</ConstantType>
         <ConstantValue>130</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="32">
+    <Access Scope="LiteralConstant" UId="34">
       <Constant>
         <ConstantType>UInt</ConstantType>
         <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LocalVariable" UId="33">
+    <Access Scope="LocalVariable" UId="35">
       <Symbol>
-        <Component Name="ReceiveData" />
+        <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="34">
+    <Access Scope="LocalVariable" UId="36">
       <Symbol>
         <Component Name="Address" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="35" />
-    <Part Name="MB_CLIENT" Version="6.0" UId="36">
-      <Instance Scope="GlobalVariable" UId="37">
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="Modbus_Cycle_Counter" />
+        <Component Name="CV" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="38">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="AlwaysTRUE" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="40">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>116</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="41">
+      <Constant>
+        <ConstantType>UDInt</ConstantType>
+        <ConstantValue>131</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="42">
+      <Constant>
+        <ConstantType>UInt</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="43">
+      <Symbol>
+        <Component Name="Send_Coordinates" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="44">
+      <Symbol>
+        <Component Name="Address" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="Clock_1Hz" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="Modbus_Cycle_Counter" />
+        <Component Name="CV" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="47">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>4</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="48">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Part Name="Ne" UId="49">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="MB_CLIENT" Version="6.0" UId="50">
+      <Instance Scope="GlobalVariable" UId="51">
         <Component Name="Modbus_Write" />
       </Instance>
     </Part>
-    <Part Name="Contact" UId="38">
-      <Negated Name="operand" />
+    <Part Name="Ne" UId="52">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
     </Part>
-    <Part Name="MB_CLIENT" Version="6.0" UId="39">
-      <Instance Scope="GlobalVariable" UId="40">
+    <Part Name="MB_CLIENT" Version="6.0" UId="53">
+      <Instance Scope="GlobalVariable" UId="54">
         <Component Name="Modbus_Receive" />
       </Instance>
     </Part>
+    <Part Name="Ne" UId="55">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="MB_CLIENT" Version="6.0" UId="56">
+      <Instance Scope="GlobalVariable" UId="57">
+        <Component Name="Modbus_Coordinates" />
+      </Instance>
+    </Part>
+    <Part Name="Contact" UId="58" />
+    <Part Name="Ge" UId="59">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="CTU" Version="1.0" UId="60">
+      <Instance Scope="GlobalVariable" UId="61">
+        <Component Name="Modbus_Cycle_Counter" />
+      </Instance>
+      <TemplateValue Name="value_type" Type="Type">Int</TemplateValue>
+    </Part>
   </Parts>
   <Wires>
-    <Wire UId="61">
-      <Powerrail />
-      <NameCon UId="36" Name="en" />
-      <NameCon UId="35" Name="in" />
-      <NameCon UId="39" Name="en" />
-      <NameCon UId="38" Name="in" />
-    </Wire>
-    <Wire UId="62">
-      <IdentCon UId="21" />
-      <NameCon UId="35" Name="operand" />
-    </Wire>
-    <Wire UId="63">
-      <NameCon UId="35" Name="out" />
-      <NameCon UId="36" Name="REQ" />
-    </Wire>
-    <Wire UId="64">
-      <IdentCon UId="22" />
-      <NameCon UId="36" Name="DISCONNECT" />
-    </Wire>
-    <Wire UId="65">
-      <IdentCon UId="23" />
-      <NameCon UId="36" Name="MB_MODE" />
-    </Wire>
-    <Wire UId="66">
-      <IdentCon UId="24" />
-      <NameCon UId="36" Name="MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="67">
-      <IdentCon UId="25" />
-      <NameCon UId="36" Name="MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="68">
-      <OpenCon UId="41" />
-      <NameCon UId="36" Name="RD_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="69">
-      <OpenCon UId="42" />
-      <NameCon UId="36" Name="RD_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="70">
-      <OpenCon UId="43" />
-      <NameCon UId="36" Name="WR_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="71">
-      <OpenCon UId="44" />
-      <NameCon UId="36" Name="WR_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="72">
-      <IdentCon UId="26" />
-      <NameCon UId="36" Name="MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="73">
-      <IdentCon UId="27" />
-      <NameCon UId="36" Name="CONNECT" />
-    </Wire>
-    <Wire UId="74">
-      <OpenCon UId="45" />
-      <NameCon UId="36" Name="RD_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="75">
-      <OpenCon UId="46" />
-      <NameCon UId="36" Name="WR_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="76">
-      <NameCon UId="36" Name="DONE" />
-      <OpenCon UId="47" />
-    </Wire>
-    <Wire UId="77">
-      <NameCon UId="36" Name="BUSY" />
-      <OpenCon UId="48" />
-    </Wire>
-    <Wire UId="78">
-      <NameCon UId="36" Name="ERROR" />
-      <OpenCon UId="49" />
-    </Wire>
-    <Wire UId="79">
-      <NameCon UId="36" Name="STATUS" />
-      <OpenCon UId="50" />
-    </Wire>
-    <Wire UId="80">
-      <IdentCon UId="28" />
-      <NameCon UId="38" Name="operand" />
-    </Wire>
-    <Wire UId="81">
-      <NameCon UId="38" Name="out" />
-      <NameCon UId="39" Name="REQ" />
-    </Wire>
-    <Wire UId="82">
-      <IdentCon UId="29" />
-      <NameCon UId="39" Name="DISCONNECT" />
-    </Wire>
-    <Wire UId="83">
-      <IdentCon UId="30" />
-      <NameCon UId="39" Name="MB_MODE" />
-    </Wire>
-    <Wire UId="84">
-      <IdentCon UId="31" />
-      <NameCon UId="39" Name="MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="85">
-      <IdentCon UId="32" />
-      <NameCon UId="39" Name="MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="86">
-      <OpenCon UId="51" />
-      <NameCon UId="39" Name="RD_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="87">
-      <OpenCon UId="52" />
-      <NameCon UId="39" Name="RD_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="88">
-      <OpenCon UId="53" />
-      <NameCon UId="39" Name="WR_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="89">
-      <OpenCon UId="54" />
-      <NameCon UId="39" Name="WR_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="90">
-      <IdentCon UId="33" />
-      <NameCon UId="39" Name="MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="91">
-      <IdentCon UId="34" />
-      <NameCon UId="39" Name="CONNECT" />
-    </Wire>
-    <Wire UId="92">
-      <OpenCon UId="55" />
-      <NameCon UId="39" Name="RD_MB_DATA_PTR" />
-    </Wire>
     <Wire UId="93">
-      <OpenCon UId="56" />
-      <NameCon UId="39" Name="WR_MB_DATA_PTR" />
+      <Powerrail />
+      <NameCon UId="50" Name="en" />
+      <NameCon UId="49" Name="pre" />
+      <NameCon UId="53" Name="en" />
+      <NameCon UId="52" Name="pre" />
+      <NameCon UId="56" Name="en" />
+      <NameCon UId="55" Name="pre" />
+      <NameCon UId="58" Name="in" />
+      <NameCon UId="59" Name="pre" />
     </Wire>
     <Wire UId="94">
-      <NameCon UId="39" Name="DONE" />
-      <OpenCon UId="57" />
+      <IdentCon UId="21" />
+      <NameCon UId="49" Name="in1" />
     </Wire>
     <Wire UId="95">
-      <NameCon UId="39" Name="BUSY" />
-      <OpenCon UId="58" />
+      <IdentCon UId="22" />
+      <NameCon UId="49" Name="in2" />
     </Wire>
     <Wire UId="96">
-      <NameCon UId="39" Name="ERROR" />
-      <OpenCon UId="59" />
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="DISCONNECT" />
     </Wire>
     <Wire UId="97">
-      <NameCon UId="39" Name="STATUS" />
-      <OpenCon UId="60" />
+      <IdentCon UId="23" />
+      <NameCon UId="50" Name="REQ" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="24" />
+      <NameCon UId="50" Name="MB_MODE" />
+    </Wire>
+    <Wire UId="99">
+      <IdentCon UId="25" />
+      <NameCon UId="50" Name="MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="26" />
+      <NameCon UId="50" Name="MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="101">
+      <OpenCon UId="62" />
+      <NameCon UId="50" Name="RD_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="102">
+      <OpenCon UId="63" />
+      <NameCon UId="50" Name="RD_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="103">
+      <OpenCon UId="64" />
+      <NameCon UId="50" Name="WR_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="104">
+      <OpenCon UId="65" />
+      <NameCon UId="50" Name="WR_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="27" />
+      <NameCon UId="50" Name="MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="106">
+      <IdentCon UId="28" />
+      <NameCon UId="50" Name="CONNECT" />
+    </Wire>
+    <Wire UId="107">
+      <OpenCon UId="66" />
+      <NameCon UId="50" Name="RD_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="108">
+      <OpenCon UId="67" />
+      <NameCon UId="50" Name="WR_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="109">
+      <NameCon UId="50" Name="DONE" />
+      <OpenCon UId="68" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="50" Name="BUSY" />
+      <OpenCon UId="69" />
+    </Wire>
+    <Wire UId="111">
+      <NameCon UId="50" Name="ERROR" />
+      <OpenCon UId="70" />
+    </Wire>
+    <Wire UId="112">
+      <NameCon UId="50" Name="STATUS" />
+      <OpenCon UId="71" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="29" />
+      <NameCon UId="52" Name="in1" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="30" />
+      <NameCon UId="52" Name="in2" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="DISCONNECT" />
+    </Wire>
+    <Wire UId="116">
+      <IdentCon UId="31" />
+      <NameCon UId="53" Name="REQ" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="32" />
+      <NameCon UId="53" Name="MB_MODE" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="33" />
+      <NameCon UId="53" Name="MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="119">
+      <IdentCon UId="34" />
+      <NameCon UId="53" Name="MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="120">
+      <OpenCon UId="72" />
+      <NameCon UId="53" Name="RD_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="121">
+      <OpenCon UId="73" />
+      <NameCon UId="53" Name="RD_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="122">
+      <OpenCon UId="74" />
+      <NameCon UId="53" Name="WR_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="123">
+      <OpenCon UId="75" />
+      <NameCon UId="53" Name="WR_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="124">
+      <IdentCon UId="35" />
+      <NameCon UId="53" Name="MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="125">
+      <IdentCon UId="36" />
+      <NameCon UId="53" Name="CONNECT" />
+    </Wire>
+    <Wire UId="126">
+      <OpenCon UId="76" />
+      <NameCon UId="53" Name="RD_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="127">
+      <OpenCon UId="77" />
+      <NameCon UId="53" Name="WR_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="128">
+      <NameCon UId="53" Name="DONE" />
+      <OpenCon UId="78" />
+    </Wire>
+    <Wire UId="129">
+      <NameCon UId="53" Name="BUSY" />
+      <OpenCon UId="79" />
+    </Wire>
+    <Wire UId="130">
+      <NameCon UId="53" Name="ERROR" />
+      <OpenCon UId="80" />
+    </Wire>
+    <Wire UId="131">
+      <NameCon UId="53" Name="STATUS" />
+      <OpenCon UId="81" />
+    </Wire>
+    <Wire UId="132">
+      <IdentCon UId="37" />
+      <NameCon UId="55" Name="in1" />
+    </Wire>
+    <Wire UId="133">
+      <IdentCon UId="38" />
+      <NameCon UId="55" Name="in2" />
+    </Wire>
+    <Wire UId="134">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="56" Name="DISCONNECT" />
+    </Wire>
+    <Wire UId="135">
+      <IdentCon UId="39" />
+      <NameCon UId="56" Name="REQ" />
+    </Wire>
+    <Wire UId="136">
+      <IdentCon UId="40" />
+      <NameCon UId="56" Name="MB_MODE" />
+    </Wire>
+    <Wire UId="137">
+      <IdentCon UId="41" />
+      <NameCon UId="56" Name="MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="138">
+      <IdentCon UId="42" />
+      <NameCon UId="56" Name="MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="139">
+      <OpenCon UId="82" />
+      <NameCon UId="56" Name="RD_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="140">
+      <OpenCon UId="83" />
+      <NameCon UId="56" Name="RD_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="141">
+      <OpenCon UId="84" />
+      <NameCon UId="56" Name="WR_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="142">
+      <OpenCon UId="85" />
+      <NameCon UId="56" Name="WR_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="143">
+      <IdentCon UId="43" />
+      <NameCon UId="56" Name="MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="144">
+      <IdentCon UId="44" />
+      <NameCon UId="56" Name="CONNECT" />
+    </Wire>
+    <Wire UId="145">
+      <OpenCon UId="86" />
+      <NameCon UId="56" Name="RD_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="146">
+      <OpenCon UId="87" />
+      <NameCon UId="56" Name="WR_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="147">
+      <NameCon UId="56" Name="DONE" />
+      <OpenCon UId="88" />
+    </Wire>
+    <Wire UId="148">
+      <NameCon UId="56" Name="BUSY" />
+      <OpenCon UId="89" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="56" Name="ERROR" />
+      <OpenCon UId="90" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="56" Name="STATUS" />
+      <OpenCon UId="91" />
+    </Wire>
+    <Wire UId="151">
+      <IdentCon UId="45" />
+      <NameCon UId="58" Name="operand" />
+    </Wire>
+    <Wire UId="152">
+      <NameCon UId="58" Name="out" />
+      <NameCon UId="60" Name="CU" />
+    </Wire>
+    <Wire UId="153">
+      <IdentCon UId="46" />
+      <NameCon UId="59" Name="in1" />
+    </Wire>
+    <Wire UId="154">
+      <IdentCon UId="47" />
+      <NameCon UId="59" Name="in2" />
+    </Wire>
+    <Wire UId="155">
+      <NameCon UId="59" Name="out" />
+      <NameCon UId="60" Name="R" />
+    </Wire>
+    <Wire UId="156">
+      <IdentCon UId="48" />
+      <NameCon UId="60" Name="PV" />
+    </Wire>
+    <Wire UId="157">
+      <NameCon UId="60" Name="CV" />
+      <OpenCon UId="92" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -382,7 +1599,7 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="22">
       <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
@@ -399,7 +1616,7 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="24">
       <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
@@ -416,7 +1633,7 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="26">
       <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
@@ -433,7 +1650,7 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="28">
       <Symbol>
-        <Component Name="SendData" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
@@ -541,136 +1758,156 @@ V.0.1.0 - Created function block</Text>
   <Parts>
     <Access Scope="LocalVariable" UId="21">
       <Symbol>
-        <Component Name="ReceiveData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>0</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
+        <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="22">
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
       <Symbol>
         <Component Name="Working" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="23">
+    <Access Scope="LocalVariable" UId="24">
       <Symbol>
-        <Component Name="ReceiveData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>1</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
+        <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="24">
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
       <Symbol>
         <Component Name="Done" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="25">
+    <Access Scope="LocalVariable" UId="27">
       <Symbol>
-        <Component Name="ReceiveData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>2</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
+        <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="26">
+    <Access Scope="LiteralConstant" UId="28">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
       <Symbol>
         <Component Name="Error" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="30">
       <Symbol>
-        <Component Name="ReceiveData" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>3</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
+        <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="28">
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>4</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
       <Symbol>
         <Component Name="Reached_Coordinates" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Coil" UId="30" />
-    <Part Name="Contact" UId="31" />
-    <Part Name="Coil" UId="32" />
-    <Part Name="Contact" UId="33" />
+    <Part Name="Eq" UId="33">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
     <Part Name="Coil" UId="34" />
-    <Part Name="Contact" UId="35" />
+    <Part Name="Eq" UId="35">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
     <Part Name="Coil" UId="36" />
+    <Part Name="Eq" UId="37">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="38" />
+    <Part Name="Eq" UId="39">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="40" />
   </Parts>
   <Wires>
-    <Wire UId="37">
-      <Powerrail />
-      <NameCon UId="29" Name="in" />
-      <NameCon UId="31" Name="in" />
-      <NameCon UId="33" Name="in" />
-      <NameCon UId="35" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
     <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
+      <Powerrail />
+      <NameCon UId="33" Name="pre" />
+      <NameCon UId="35" Name="pre" />
+      <NameCon UId="37" Name="pre" />
+      <NameCon UId="39" Name="pre" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in" />
+      <IdentCon UId="21" />
+      <NameCon UId="33" Name="in1" />
     </Wire>
     <Wire UId="43">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="in2" />
     </Wire>
     <Wire UId="44">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="operand" />
-    </Wire>
-    <Wire UId="45">
       <NameCon UId="33" Name="out" />
       <NameCon UId="34" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="26" />
+    <Wire UId="45">
+      <IdentCon UId="23" />
       <NameCon UId="34" Name="operand" />
     </Wire>
+    <Wire UId="46">
+      <IdentCon UId="24" />
+      <NameCon UId="35" Name="in1" />
+    </Wire>
     <Wire UId="47">
-      <IdentCon UId="27" />
-      <NameCon UId="35" Name="operand" />
+      <IdentCon UId="25" />
+      <NameCon UId="35" Name="in2" />
     </Wire>
     <Wire UId="48">
       <NameCon UId="35" Name="out" />
       <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="49">
-      <IdentCon UId="28" />
+      <IdentCon UId="26" />
       <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="in1" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="28" />
+      <NameCon UId="37" Name="in2" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="29" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="30" />
+      <NameCon UId="39" Name="in1" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="31" />
+      <NameCon UId="39" Name="in2" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="32" />
+      <NameCon UId="40" Name="operand" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -701,7 +1938,251 @@ V.0.1.0 - Created function block</Text>
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource />
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Send_Letter_A" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Receive_Data" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Letter_A" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="Letter_Steps" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="X" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Send_Coordinates" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Letter_A" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="Letter_Steps" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Y" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="Send_Coordinates" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="Letter_A" AccessModifier="Array">
+          <Access Scope="LocalVariable">
+            <Symbol>
+              <Component Name="Letter_Steps" />
+            </Symbol>
+          </Access>
+        </Component>
+        <Component Name="Z" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Send_Coordinates" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>2</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="Receive_Data" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="Robot_Working_Oneshot" />
+        <Component Name="Q" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="33">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="Letter_Steps" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="Letter_Steps" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="36" />
+    <Part Name="Eq" UId="37">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="38" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="39" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="40" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="41">
+      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    </Part>
+    <Part Name="R_TRIG" Version="1.0" UId="42">
+      <Instance Scope="GlobalVariable" UId="43">
+        <Component Name="Robot_Working_Oneshot" />
+      </Instance>
+    </Part>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Add" UId="45" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <AutomaticTyped Name="SrcType" />
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="47">
+      <Powerrail />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="42" Name="en" />
+      <NameCon UId="41" Name="pre" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="21" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="37" Name="pre" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="22" />
+      <NameCon UId="37" Name="in1" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="23" />
+      <NameCon UId="37" Name="in2" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="en" />
+      <NameCon UId="39" Name="en" />
+      <NameCon UId="40" Name="en" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="24" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="38" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="39" Name="out1" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="28" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="40" Name="out1" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="30" />
+      <NameCon UId="41" Name="in1" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="31" />
+      <NameCon UId="41" Name="in2" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="CLK" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="42" Name="eno" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="Q" />
+      <OpenCon UId="46" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="en" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="33" />
+      <NameCon UId="45" Name="in1" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="34" />
+      <NameCon UId="45" Name="in2" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="45" Name="out" />
+      <IdentCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -720,6 +2201,347 @@ V.0.1.0 - Created function block</Text>
               <MultilingualTextItem ID="16" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
+                  <Text>Send coordinates to UR</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <LineComment Inserted="true" UId="21">
+    <Text UId="22">
+//If we need to make letter A, and robot is sending ready signal
+IF #Send_Letter_A AND #Send_Data[25] THEN
+
+    FOR #For_Loop_Counter := 32 TO 48 DO
+        //Find the bit state inside to INT of letter_A array, and copy that to the Modbus data array
+        //The for loop repeats the steps again for the array posistions 32-48
+        #Letter_A[#Letter_Steps].X.%X0 := #Send_Data[#For_Loop_Counter];
+    END_FOR;
+    
+    FOR #For_Loop_Counter := 49 TO 64 DO
+        #Letter_A[#Letter_Steps].Y.%X0 := #Send_Data[#For_Loop_Counter];
+    END_FOR;
+    
+    FOR #For_Loop_Counter := 65 TO 79 DO
+        #Letter_A[#Letter_Steps].Z.%X0 := #Send_Data[#For_Loop_Counter];
+    END_FOR;
+    
+END_IF; </Text>
+  </LineComment>
+  <NewLine UId="23" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Insert coordinates into Modbus_Data array</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="HMI_String" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>DInt</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="String_To_Letter_Array" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="String_Length" />
+      </Symbol>
+    </Access>
+    <Part Name="Strg_TO_Chars" Version="1.2" UId="25">
+      <TemplateValue Name="ptr_type" Type="Type">Variant</TemplateValue>
+      <TemplateValue Name="strg_type" Type="Type">String</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <Powerrail />
+      <NameCon UId="25" Name="en" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="Strg" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="pChars" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="Chars" />
+    </Wire>
+    <Wire UId="30">
+      <NameCon UId="25" Name="Cnt" />
+      <IdentCon UId="24" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Convert HMI_String to letters</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank UId="22" />
+  <Access Scope="LocalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="Currently_Processing" UId="25" />
+    </Symbol>
+  </Access>
+  <Blank UId="26" />
+  <Token Text="&lt;" UId="27" />
+  <Blank UId="28" />
+  <Access Scope="LocalVariable" UId="29">
+    <Symbol UId="30">
+      <Component Name="String_Length" UId="31" />
+    </Symbol>
+  </Access>
+  <Blank UId="32" />
+  <Token Text="THEN" UId="33" />
+  <Blank UId="34" />
+  <LineComment UId="35">
+    <Text UId="36">Hvis vi ikke er nået forbi enden af teksten</Text>
+  </LineComment>
+  <NewLine UId="37" />
+  <Blank Num="4" UId="38" />
+  <NewLine UId="39" />
+  <Blank Num="4" UId="40" />
+  <Token Text="IF" UId="41" />
+  <Blank UId="42" />
+  <Access Scope="LocalVariable" UId="43">
+    <Symbol UId="44">
+      <Component Name="String_To_Letter_Array" UId="45">
+        <Token Text="[" UId="46" />
+        <Access Scope="LocalVariable" UId="47">
+          <Symbol UId="48">
+            <Component Name="Currently_Processing" UId="49" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="50" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank UId="51" />
+  <Token Text="=" UId="52" />
+  <Blank UId="53" />
+  <Access Scope="LiteralConstant" UId="54">
+    <Constant UId="55">
+      <ConstantValue UId="57">'A'</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="58" />
+  <Token Text="THEN" UId="59" />
+  <Blank UId="60" />
+  <LineComment UId="61">
+    <Text UId="62">Hvis der på position X, er et "A" i teksten</Text>
+  </LineComment>
+  <NewLine UId="63" />
+  <Blank Num="8" UId="64" />
+  <Access Scope="LocalVariable" UId="65">
+    <Symbol UId="66">
+      <Component Name="Send_Letter_A" UId="67" />
+    </Symbol>
+  </Access>
+  <Blank UId="68" />
+  <Token Text=":=" UId="69" />
+  <Blank UId="70" />
+  <Access Scope="LiteralConstant" UId="71">
+    <Constant UId="72">
+      <ConstantValue UId="74">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="75" />
+  <NewLine UId="76" />
+  <Blank Num="4" UId="77" />
+  <Token Text="ELSIF" UId="78" />
+  <Blank UId="79" />
+  <Access Scope="LocalVariable" UId="80">
+    <Symbol UId="81">
+      <Component Name="String_To_Letter_Array" UId="82">
+        <Token Text="[" UId="83" />
+        <Access Scope="LocalVariable" UId="84">
+          <Symbol UId="85">
+            <Component Name="Currently_Processing" UId="86" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="87" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank UId="88" />
+  <Token Text="=" UId="89" />
+  <Blank UId="90" />
+  <Access Scope="LiteralConstant" UId="91">
+    <Constant UId="92">
+      <ConstantValue UId="94">'B'</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="95" />
+  <Token Text="THEN" UId="96" />
+  <NewLine UId="97" />
+  <Blank Num="8" UId="98" />
+  <Access Scope="LocalVariable" UId="99">
+    <Symbol UId="100">
+      <Component Name="Send_Letter_B" UId="101" />
+    </Symbol>
+  </Access>
+  <Blank UId="102" />
+  <Token Text=":=" UId="103" />
+  <Blank UId="104" />
+  <Access Scope="LiteralConstant" UId="105">
+    <Constant UId="106">
+      <ConstantValue UId="108">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="109" />
+  <NewLine UId="110" />
+  <Blank Num="4" UId="111" />
+  <Token Text="ELSIF" UId="112" />
+  <Blank UId="113" />
+  <Access Scope="LocalVariable" UId="114">
+    <Symbol UId="115">
+      <Component Name="String_To_Letter_Array" UId="116">
+        <Token Text="[" UId="117" />
+        <Access Scope="LocalVariable" UId="118">
+          <Symbol UId="119">
+            <Component Name="Currently_Processing" UId="120" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="121" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank UId="122" />
+  <Token Text="=" UId="123" />
+  <Blank UId="124" />
+  <Access Scope="LiteralConstant" UId="125">
+    <Constant UId="126">
+      <ConstantValue UId="128">'C'</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank UId="129" />
+  <Token Text="THEN" UId="130" />
+  <NewLine UId="131" />
+  <Blank Num="8" UId="132" />
+  <Access Scope="LocalVariable" UId="133">
+    <Symbol UId="134">
+      <Component Name="Send_Letter_B" UId="135" />
+    </Symbol>
+  </Access>
+  <Blank UId="136" />
+  <Token Text=":=" UId="137" />
+  <Blank UId="138" />
+  <Access Scope="LiteralConstant" UId="139">
+    <Constant UId="140">
+      <ConstantValue UId="142">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="143" />
+  <NewLine UId="144" />
+  <Blank Num="4" UId="145" />
+  <Token Text="END_IF" UId="146" />
+  <Token Text=";" UId="147" />
+  <NewLine UId="148" />
+  <Token Text="END_IF" UId="149" />
+  <Token Text=";" UId="150" />
+  <NewLine UId="151" />
+  <Blank Num="4" UId="152" />
+  <NewLine UId="153" />
+  <Blank Num="4" UId="154" />
+  <NewLine UId="155" />
+  <Blank Num="4" UId="156" />
+  <NewLine UId="157" />
+  <Blank Num="4" UId="158" />
+  <NewLine UId="159" />
+  <Blank Num="4" UId="160" />
+  <NewLine UId="161" />
+  <Blank Num="4" UId="162" />
+  <NewLine UId="163" />
+  <Blank Num="4" UId="164" />
+  <NewLine UId="165" />
+  <Blank Num="4" UId="166" />
+  <NewLine UId="167" />
+  <Blank Num="4" UId="168" />
+  <NewLine UId="169" />
+  <Blank Num="4" UId="170" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
@@ -727,9 +2549,9 @@ V.0.1.0 - Created function block</Text>
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="17" CompositionName="Title">
+      <MultilingualText ID="26" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="18" CompositionName="Items">
+          <MultilingualTextItem ID="27" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />

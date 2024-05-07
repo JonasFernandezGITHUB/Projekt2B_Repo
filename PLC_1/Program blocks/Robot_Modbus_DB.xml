@@ -14,7 +14,7 @@
     <Member Name="Speed_Transport" Datatype="Int" />
     <Member Name="Speed_Grinding" Datatype="Int" />
     <Member Name="Grinding_Coordinates" Datatype="Bool" />
-    <Member Name="Letter" Datatype="DB_ANY" />
+    <Member Name="HMI_String" Datatype="String" />
   </Section>
   <Section Name="Output">
     <Member Name="Working" Datatype="Bool" />
@@ -26,8 +26,25 @@
   <Section Name="Static">
     <Member Name="DISCONNECT" Datatype="Bool" />
     <Member Name="Address" Datatype="TCON_IP_v4" Version="1.0" />
-    <Member Name="ReceiveData" Datatype="Array[0..15] of Bool" />
-    <Member Name="SendData" Datatype="Array[0..15] of Bool" />
+    <Member Name="Receive_Data" Datatype="Int" />
+    <Member Name="Send_Data" Datatype="Array[0..63] of Bool" />
+    <Member Name="Send_Coordinates" Datatype="Array[0..2] of Int" />
+    <Member Name="Letter_A" Datatype="Array[0..20] of &quot;XYZ_Coordinates&quot;" />
+    <Member Name="Letter_Steps" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Rising_edge" Datatype="Bool" />
+    <Member Name="String_To_Letter_Array" Datatype="Array[0..16] of Char" />
+    <Member Name="String_Length" Datatype="Int" />
+    <Member Name="Currently_Processing" Datatype="Int" />
+    <Member Name="Send_Letter_A" Datatype="Bool" />
+    <Member Name="Send_Letter_B" Datatype="Bool" />
+    <Member Name="Send_Letter_C" Datatype="Bool" />
+    <Member Name="MB_Client_Mode" Datatype="Int" />
+    <Member Name="MB_Client_Modbus_Address" Datatype="Int" />
+    <Member Name="For_Loop_Counter" Datatype="Int" />
   </Section>
 </Sections></Interface>
       <Name>Robot_Modbus_DB</Name>

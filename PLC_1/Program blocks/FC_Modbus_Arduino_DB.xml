@@ -17,7 +17,7 @@
 </Sections></Interface>
       <Name>FC_Modbus_Arduino_DB</Name>
       <Namespace />
-      <Number>4</Number>
+      <Number>12</Number>
       <ProgrammingLanguage>DB</ProgrammingLanguage>
     </AttributeList>
     <ObjectList>

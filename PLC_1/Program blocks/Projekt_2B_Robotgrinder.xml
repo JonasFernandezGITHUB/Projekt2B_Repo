@@ -50,7 +50,7 @@
       <MemoryReserve>100</MemoryReserve>
       <Name>Projekt_2B_Robotgrinder</Name>
       <Namespace />
-      <Number>2</Number>
+      <Number>4</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
     </AttributeList>

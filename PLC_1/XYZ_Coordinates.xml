@@ -5,12 +5,11 @@
     <AttributeList>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="None">
-    <Member Name="X" Datatype="Real" />
-    <Member Name="Y" Datatype="Real" />
-    <Member Name="Z" Datatype="Real" />
-    <Member Name="Mode" Datatype="Int" />
-    <Member Name="I" Datatype="Real" />
-    <Member Name="J" Datatype="Real" />
+    <Member Name="X" Datatype="Int" />
+    <Member Name="Y" Datatype="Int" />
+    <Member Name="Z" Datatype="Int" />
+    <Member Name="I" Datatype="Int" />
+    <Member Name="J" Datatype="Int" />
   </Section>
 </Sections></Interface>
       <Name>XYZ_Coordinates</Name>

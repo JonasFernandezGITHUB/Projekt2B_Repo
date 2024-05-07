@@ -23,7 +23,7 @@
       <MemoryLayout>Optimized</MemoryLayout>
       <Name>Timer_Paint</Name>
       <Namespace />
-      <Number>1</Number>
+      <Number>6</Number>
       <OfSystemLibElement>IEC_TIMER</OfSystemLibElement>
       <OfSystemLibVersion>1.0</OfSystemLibVersion>
       <ProgrammingLanguage>DB</ProgrammingLanguage>
