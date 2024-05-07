@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>MB_CLIENT</InstanceOfName>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="REQ" Datatype="Bool" />
+    <Member Name="DISCONNECT" Datatype="Bool" />
+    <Member Name="MB_MODE" Datatype="USInt" />
+    <Member Name="MB_DATA_ADDR" Datatype="UDInt" />
+    <Member Name="MB_DATA_LEN" Datatype="UInt" />
+    <Member Name="RD_MB_DATA_ADDR" Datatype="UInt" />
+    <Member Name="RD_MB_DATA_LEN" Datatype="UInt" />
+    <Member Name="WR_MB_DATA_ADDR" Datatype="UInt" />
+    <Member Name="WR_MB_DATA_LEN" Datatype="UInt" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="DONE" Datatype="Bool" />
+    <Member Name="BUSY" Datatype="Bool" />
+    <Member Name="ERROR" Datatype="Bool" />
+    <Member Name="STATUS" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="MB_DATA_PTR" Datatype="Variant" />
+    <Member Name="CONNECT" Datatype="Variant" />
+    <Member Name="RD_MB_DATA_PTR" Datatype="Variant" />
+    <Member Name="WR_MB_DATA_PTR" Datatype="Variant" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="TCON" Datatype="TCON" Version="4.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TDISCON" Datatype="TDISCON" Version="2.1">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TSEND" Datatype="TSEND" Version="4.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TRECEIVE" Datatype="TRCV" Version="4.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TRESET" Datatype="T_RESET" Version="1.2">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TDIAG" Datatype="T_DIAG" Version="1.2">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TDIAG_Status" Datatype="TDiag_Status" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Blocked_Proc_Timeout" Datatype="Real" />
+    <Member Name="Rcv_Timeout" Datatype="Real" />
+    <Member Name="MB_Unit_ID" Datatype="Byte" />
+    <Member Name="MB_Transaction_ID" Datatype="Word" />
+    <Member Name="RD_MB_DATA_PTR_Length" Datatype="UDInt" />
+    <Member Name="WR_MB_DATA_PTR_Length" Datatype="UDInt" />
+    <Member Name="MB_State" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="SAVED_MB_DATA_ADDR" Datatype="UDInt" Accessibility="Internal" />
+    <Member Name="SAVED_DATA_LEN" Datatype="UInt" Accessibility="Internal" />
+    <Member Name="SAVED_MB_MODE" Datatype="USInt" Accessibility="Internal" />
+    <Member Name="Connection_ID" Datatype="Word" />
+    <Member Name="Retries" Datatype="Word" />
+    <Member Name="TEMP_DATA" Datatype="Array[1..263] of Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="rcv_timer" Datatype="TON_TIME" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="wd_timer" Datatype="TON_TIME" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Connected" Datatype="Bool" />
+    <Member Name="Active" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="BytesReceived" Datatype="UDInt" />
+    <Member Name="Func_Code_23_saved" Datatype="Struct">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Member Name="mb_data_addr_read" Datatype="Word" />
+      <Member Name="mb_data_len_read" Datatype="Word" />
+      <Member Name="mb_data_addr_write" Datatype="Word" />
+      <Member Name="mb_data_len_write" Datatype="Word" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>Modbus_Write</Name>
+      <Namespace />
+      <Number>3</Number>
+      <OfSystemLibElement>MB_CLIENT</OfSystemLibElement>
+      <OfSystemLibVersion>6.0</OfSystemLibVersion>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

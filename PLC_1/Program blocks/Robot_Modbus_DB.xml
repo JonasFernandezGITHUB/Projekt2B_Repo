@@ -25,9 +25,10 @@
   <Section Name="InOut" />
   <Section Name="Static">
     <Member Name="DISCONNECT" Datatype="Bool" />
+    <Member Name="Address_1" Datatype="TCON_IP_v4" Version="1.0" />
     <Member Name="Address" Datatype="TCON_IP_v4" Version="1.0" />
     <Member Name="Receive_Data" Datatype="Int" />
-    <Member Name="Send_Data" Datatype="Array[0..63] of Bool" />
+    <Member Name="Send_Data" Datatype="Array[0..5] of Int" />
     <Member Name="Send_Coordinates" Datatype="Array[0..2] of Int" />
     <Member Name="Letter_A" Datatype="Array[0..20] of &quot;XYZ_Coordinates&quot;" />
     <Member Name="Letter_Steps" Datatype="Int">

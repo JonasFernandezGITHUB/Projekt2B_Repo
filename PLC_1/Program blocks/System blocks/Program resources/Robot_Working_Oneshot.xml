@@ -3,21 +3,24 @@
   <Engineering version="V19" />
   <SW.Blocks.InstanceDB ID="0">
     <AttributeList>
-      <InstanceOfName>FC_Modbus_Arduino</InstanceOfName>
-      <InstanceOfType>FB</InstanceOfType>
+      <InstanceOfName>R_TRIG</InstanceOfName>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Input">
-    <Member Name="Start_Feeder" Datatype="Bool" />
+    <Member Name="CLK" Datatype="Bool" />
   </Section>
   <Section Name="Output">
-    <Member Name="Feeder_Active" Datatype="Bool" />
+    <Member Name="Q" Datatype="Bool" />
   </Section>
   <Section Name="InOut" />
-  <Section Name="Static" />
+  <Section Name="Static">
+    <Member Name="Stat_Bit" Datatype="Bool" />
+  </Section>
 </Sections></Interface>
-      <Name>FC_Modbus_Arduino_DB</Name>
+      <Name>Robot_Working_Oneshot</Name>
       <Namespace />
-      <Number>12</Number>
+      <Number>8</Number>
+      <OfSystemLibElement>R_TRIG</OfSystemLibElement>
+      <OfSystemLibVersion>1.0</OfSystemLibVersion>
       <ProgrammingLanguage>DB</ProgrammingLanguage>
     </AttributeList>
     <ObjectList>

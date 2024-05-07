@@ -57,40 +57,45 @@
         <Component Name="Input2" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="24">
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="Input3" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
       <Constant>
         <ConstantType>String</ConstantType>
         <ConstantValue>'ABC'</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="GlobalVariable" UId="25">
+    <Access Scope="GlobalVariable" UId="26">
       <Symbol>
         <Component Name="Output1" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="26">
+    <Access Scope="GlobalVariable" UId="27">
       <Symbol>
         <Component Name="Output0" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="27">
-      <Symbol>
-        <Component Name="Emergency_Stop_Status_150K1" />
-      </Symbol>
-    </Access>
     <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="HMI_Reset" />
+        <Component Name="Emergency_Stop_Status_150K1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="29">
       <Symbol>
+        <Component Name="HMI_Reset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
         <Component Name="Emergency_Stop_Status_150K1" />
       </Symbol>
     </Access>
-    <Call UId="30">
+    <Call UId="31">
       <CallInfo Name="Robot_Modbus" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="31">
+        <Instance Scope="GlobalVariable" UId="32">
           <Component Name="Robot_Modbus_DB" />
         </Instance>
         <Parameter Name="Proces_Item" Section="Input" Type="Bool" />
@@ -107,25 +112,16 @@
         <Parameter Name="Reached_Coordinates" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
-    <Call UId="32">
-      <CallInfo Name="FC_Modbus_Arduino" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="33">
-          <Component Name="FC_Modbus_Arduino_DB" />
-        </Instance>
-        <Parameter Name="Start_Feeder" Section="Input" Type="Bool" />
-        <Parameter Name="Feeder_Ready" Section="Output" Type="Bool" />
-      </CallInfo>
-    </Call>
-    <Call UId="34">
+    <Call UId="33">
       <CallInfo Name="Emergency_Stop" BlockType="FC">
         <Parameter Name="Emergency_Stop_Signal" Section="Input" Type="Bool" />
         <Parameter Name="Reset" Section="Input" Type="Bool" />
         <Parameter Name="Output" Section="Output" Type="Bool" />
       </CallInfo>
     </Call>
-    <Call UId="35">
+    <Call UId="34">
       <CallInfo Name="Projekt_2B_Robotgrinder" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="36">
+        <Instance Scope="GlobalVariable" UId="35">
           <Component Name="Projekt_2B_Robotgrinder_DB" />
         </Instance>
         <Parameter Name="Emergency_Stop_Status_150K1" Section="Input" Type="Bool" />
@@ -151,159 +147,150 @@
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="64">
+    <Wire UId="60">
       <Powerrail />
-      <NameCon UId="30" Name="en" />
-      <NameCon UId="32" Name="en" />
-      <NameCon UId="34" Name="en" />
+      <NameCon UId="31" Name="en" />
+      <NameCon UId="33" Name="en" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="21" />
+      <NameCon UId="31" Name="Proces_Item" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="22" />
+      <NameCon UId="31" Name="Place_Item_Conveyor" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="23" />
+      <NameCon UId="31" Name="Place_Item_Storage" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="Scrap_Item" />
     </Wire>
     <Wire UId="65">
-      <IdentCon UId="21" />
-      <NameCon UId="30" Name="Proces_Item" />
+      <OpenCon UId="36" />
+      <NameCon UId="31" Name="Speed_Transport" />
     </Wire>
     <Wire UId="66">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="Place_Item_Conveyor" />
+      <OpenCon UId="37" />
+      <NameCon UId="31" Name="Speed_Grinding" />
     </Wire>
     <Wire UId="67">
-      <IdentCon UId="23" />
-      <NameCon UId="30" Name="Place_Item_Storage" />
+      <OpenCon UId="38" />
+      <NameCon UId="31" Name="Grinding_Coordinates" />
     </Wire>
     <Wire UId="68">
-      <OpenCon UId="37" />
-      <NameCon UId="30" Name="Scrap_Item" />
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="HMI_String" />
     </Wire>
     <Wire UId="69">
-      <OpenCon UId="38" />
-      <NameCon UId="30" Name="Speed_Transport" />
-    </Wire>
-    <Wire UId="70">
-      <OpenCon UId="39" />
-      <NameCon UId="30" Name="Speed_Grinding" />
-    </Wire>
-    <Wire UId="71">
-      <OpenCon UId="40" />
-      <NameCon UId="30" Name="Grinding_Coordinates" />
-    </Wire>
-    <Wire UId="72">
-      <IdentCon UId="24" />
-      <NameCon UId="30" Name="HMI_String" />
-    </Wire>
-    <Wire UId="73">
-      <NameCon UId="30" Name="Working" />
-      <IdentCon UId="25" />
-    </Wire>
-    <Wire UId="74">
-      <NameCon UId="30" Name="Done" />
+      <NameCon UId="31" Name="Working" />
       <IdentCon UId="26" />
     </Wire>
+    <Wire UId="70">
+      <NameCon UId="31" Name="Done" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="31" Name="Error" />
+      <OpenCon UId="39" />
+    </Wire>
+    <Wire UId="72">
+      <NameCon UId="31" Name="Reached_Coordinates" />
+      <OpenCon UId="40" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="28" />
+      <NameCon UId="33" Name="Emergency_Stop_Signal" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="29" />
+      <NameCon UId="33" Name="Reset" />
+    </Wire>
     <Wire UId="75">
-      <NameCon UId="30" Name="Error" />
-      <OpenCon UId="41" />
+      <NameCon UId="33" Name="eno" />
+      <NameCon UId="34" Name="en" />
     </Wire>
     <Wire UId="76">
-      <NameCon UId="30" Name="Reached_Coordinates" />
-      <OpenCon UId="42" />
+      <NameCon UId="33" Name="Output" />
+      <IdentCon UId="30" />
     </Wire>
     <Wire UId="77">
-      <OpenCon UId="43" />
-      <NameCon UId="32" Name="Start_Feeder" />
+      <OpenCon UId="41" />
+      <NameCon UId="34" Name="Emergency_Stop_Status_150K1" />
     </Wire>
     <Wire UId="78">
-      <NameCon UId="32" Name="Feeder_Ready" />
-      <OpenCon UId="44" />
+      <OpenCon UId="42" />
+      <NameCon UId="34" Name="Sensor_102B2" />
     </Wire>
     <Wire UId="79">
-      <IdentCon UId="27" />
-      <NameCon UId="34" Name="Emergency_Stop_Signal" />
+      <OpenCon UId="43" />
+      <NameCon UId="34" Name="Sensor_102B3" />
     </Wire>
     <Wire UId="80">
-      <IdentCon UId="28" />
-      <NameCon UId="34" Name="Reset" />
+      <OpenCon UId="44" />
+      <NameCon UId="34" Name="Sensor_102B4" />
     </Wire>
     <Wire UId="81">
-      <NameCon UId="34" Name="eno" />
-      <NameCon UId="35" Name="en" />
+      <OpenCon UId="45" />
+      <NameCon UId="34" Name="Sensor_102B5" />
     </Wire>
     <Wire UId="82">
-      <NameCon UId="34" Name="Output" />
-      <IdentCon UId="29" />
+      <OpenCon UId="46" />
+      <NameCon UId="34" Name="Sensor_102B6" />
     </Wire>
     <Wire UId="83">
-      <OpenCon UId="45" />
-      <NameCon UId="35" Name="Emergency_Stop_Status_150K1" />
+      <OpenCon UId="47" />
+      <NameCon UId="34" Name="HMI_Start" />
     </Wire>
     <Wire UId="84">
-      <OpenCon UId="46" />
-      <NameCon UId="35" Name="Sensor_102B2" />
+      <OpenCon UId="48" />
+      <NameCon UId="34" Name="HMI_Pause" />
     </Wire>
     <Wire UId="85">
-      <OpenCon UId="47" />
-      <NameCon UId="35" Name="Sensor_102B3" />
+      <OpenCon UId="49" />
+      <NameCon UId="34" Name="HMI_Reset" />
     </Wire>
     <Wire UId="86">
-      <OpenCon UId="48" />
-      <NameCon UId="35" Name="Sensor_102B4" />
+      <OpenCon UId="50" />
+      <NameCon UId="34" Name="HMI_Start_1" />
     </Wire>
     <Wire UId="87">
-      <OpenCon UId="49" />
-      <NameCon UId="35" Name="Sensor_102B5" />
+      <OpenCon UId="51" />
+      <NameCon UId="34" Name="HMI_Pause_1" />
     </Wire>
     <Wire UId="88">
-      <OpenCon UId="50" />
-      <NameCon UId="35" Name="Sensor_102B6" />
+      <OpenCon UId="52" />
+      <NameCon UId="34" Name="HMI_Reset_1" />
     </Wire>
     <Wire UId="89">
-      <OpenCon UId="51" />
-      <NameCon UId="35" Name="HMI_Start" />
+      <OpenCon UId="53" />
+      <NameCon UId="34" Name="Pause_Process" />
     </Wire>
     <Wire UId="90">
-      <OpenCon UId="52" />
-      <NameCon UId="35" Name="HMI_Pause" />
+      <NameCon UId="34" Name="Valve_106Q6" />
+      <OpenCon UId="54" />
     </Wire>
     <Wire UId="91">
-      <OpenCon UId="53" />
-      <NameCon UId="35" Name="HMI_Reset" />
+      <NameCon UId="34" Name="Motor_4Q3" />
+      <OpenCon UId="55" />
     </Wire>
     <Wire UId="92">
-      <OpenCon UId="54" />
-      <NameCon UId="35" Name="HMI_Start_1" />
+      <NameCon UId="34" Name="Motor_4Q5" />
+      <OpenCon UId="56" />
     </Wire>
     <Wire UId="93">
-      <OpenCon UId="55" />
-      <NameCon UId="35" Name="HMI_Pause_1" />
+      <NameCon UId="34" Name="Motor_6Q1" />
+      <OpenCon UId="57" />
     </Wire>
     <Wire UId="94">
-      <OpenCon UId="56" />
-      <NameCon UId="35" Name="HMI_Reset_1" />
-    </Wire>
-    <Wire UId="95">
-      <OpenCon UId="57" />
-      <NameCon UId="35" Name="Pause_Process" />
-    </Wire>
-    <Wire UId="96">
-      <NameCon UId="35" Name="Valve_106Q6" />
+      <NameCon UId="34" Name="Motor_6Q3" />
       <OpenCon UId="58" />
     </Wire>
-    <Wire UId="97">
-      <NameCon UId="35" Name="Motor_4Q3" />
+    <Wire UId="95">
+      <NameCon UId="34" Name="Reset_Safety_150K1" />
       <OpenCon UId="59" />
-    </Wire>
-    <Wire UId="98">
-      <NameCon UId="35" Name="Motor_4Q5" />
-      <OpenCon UId="60" />
-    </Wire>
-    <Wire UId="99">
-      <NameCon UId="35" Name="Motor_6Q1" />
-      <OpenCon UId="61" />
-    </Wire>
-    <Wire UId="100">
-      <NameCon UId="35" Name="Motor_6Q3" />
-      <OpenCon UId="62" />
-    </Wire>
-    <Wire UId="101">
-      <NameCon UId="35" Name="Reset_Safety_150K1" />
-      <OpenCon UId="63" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

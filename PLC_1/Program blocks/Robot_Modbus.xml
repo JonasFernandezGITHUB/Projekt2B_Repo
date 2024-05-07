@@ -27,6 +27,50 @@
   <Section Name="InOut" />
   <Section Name="Static">
     <Member Name="DISCONNECT" Datatype="Bool" />
+    <Member Name="Address_1" Datatype="TCON_IP_v4" Version="1.0">
+      <Sections>
+        <Section Name="None">
+          <Member Name="InterfaceId" Datatype="HW_ANY">
+            <StartValue>64</StartValue>
+          </Member>
+          <Member Name="ID" Datatype="CONN_OUC">
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="ConnectionType" Datatype="Byte">
+            <StartValue>11</StartValue>
+          </Member>
+          <Member Name="ActiveEstablished" Datatype="Bool">
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RemoteAddress" Datatype="IP_V4" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ADDR" Datatype="Array[1..4] of Byte">
+                  <Subelement Path="1">
+                    <StartValue>192</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>168</StartValue>
+                  </Subelement>
+                  <Subelement Path="3">
+                    <StartValue>1</StartValue>
+                  </Subelement>
+                  <Subelement Path="4">
+                    <StartValue>51</StartValue>
+                  </Subelement>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="RemotePort" Datatype="UInt">
+            <StartValue>502</StartValue>
+          </Member>
+          <Member Name="LocalPort" Datatype="UInt">
+            <StartValue>502</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
     <Member Name="Address" Datatype="TCON_IP_v4" Version="1.0">
       <Sections>
         <Section Name="None">
@@ -34,7 +78,7 @@
             <StartValue>64</StartValue>
           </Member>
           <Member Name="ID" Datatype="CONN_OUC">
-            <StartValue>1</StartValue>
+            <StartValue>3</StartValue>
           </Member>
           <Member Name="ConnectionType" Datatype="Byte">
             <StartValue>11</StartValue>
@@ -72,7 +116,7 @@
       </Sections>
     </Member>
     <Member Name="Receive_Data" Datatype="Int" />
-    <Member Name="Send_Data" Datatype="Array[0..63] of Bool" />
+    <Member Name="Send_Data" Datatype="Array[0..5] of Int" />
     <Member Name="Send_Coordinates" Datatype="Array[0..2] of Int" />
     <Member Name="Letter_A" Datatype="Array[0..20] of &quot;XYZ_Coordinates&quot;">
       <Sections>
@@ -308,7 +352,7 @@
       <MemoryReserve>100</MemoryReserve>
       <Name>Robot_Modbus</Name>
       <Namespace />
-      <Number>1</Number>
+      <Number>5</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
       <Supervisions><BlockTypeSupervisions xmlns="http://www.siemens.com/automation/Openness/SW/BlockTypeSupervisions/v3">
@@ -1102,464 +1146,246 @@ V.0.1.0 - Created function block</Text>
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="Modbus_Cycle_Counter" />
-        <Component Name="CV" />
+        <Component Name="Clock_1Hz" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="22">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="GlobalVariable" UId="23">
+    <Access Scope="GlobalVariable" UId="22">
       <Symbol>
         <Component Name="AlwaysTRUE" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="24">
+    <Access Scope="LiteralConstant" UId="23">
       <Constant>
         <ConstantType>USInt</ConstantType>
         <ConstantValue>116</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="25">
+    <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>UDInt</ConstantType>
         <ConstantValue>129</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="26">
+    <Access Scope="LiteralConstant" UId="25">
       <Constant>
         <ConstantType>UInt</ConstantType>
-        <ConstantValue>1</ConstantValue>
+        <ConstantValue>6</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LocalVariable" UId="27">
+    <Access Scope="LocalVariable" UId="26">
       <Symbol>
         <Component Name="Send_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="28">
+    <Access Scope="LocalVariable" UId="27">
       <Symbol>
         <Component Name="Address" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="29">
+    <Access Scope="GlobalVariable" UId="28">
       <Symbol>
-        <Component Name="Modbus_Cycle_Counter" />
-        <Component Name="CV" />
+        <Component Name="Clock_1Hz" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="30">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>2</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="GlobalVariable" UId="31">
+    <Access Scope="GlobalVariable" UId="29">
       <Symbol>
         <Component Name="AlwaysTRUE" />
       </Symbol>
     </Access>
-    <Access Scope="LiteralConstant" UId="32">
+    <Access Scope="LiteralConstant" UId="30">
       <Constant>
         <ConstantType>USInt</ConstantType>
         <ConstantValue>103</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="33">
+    <Access Scope="LiteralConstant" UId="31">
       <Constant>
         <ConstantType>UDInt</ConstantType>
-        <ConstantValue>130</ConstantValue>
+        <ConstantValue>135</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LiteralConstant" UId="34">
+    <Access Scope="LiteralConstant" UId="32">
       <Constant>
         <ConstantType>UInt</ConstantType>
         <ConstantValue>1</ConstantValue>
       </Constant>
     </Access>
-    <Access Scope="LocalVariable" UId="35">
+    <Access Scope="LocalVariable" UId="33">
       <Symbol>
         <Component Name="Receive_Data" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="36">
+    <Access Scope="LocalVariable" UId="34">
       <Symbol>
-        <Component Name="Address" />
+        <Component Name="Address_1" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="37">
-      <Symbol>
-        <Component Name="Modbus_Cycle_Counter" />
-        <Component Name="CV" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="38">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>3</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="GlobalVariable" UId="39">
-      <Symbol>
-        <Component Name="AlwaysTRUE" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="40">
-      <Constant>
-        <ConstantType>USInt</ConstantType>
-        <ConstantValue>116</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LiteralConstant" UId="41">
-      <Constant>
-        <ConstantType>UDInt</ConstantType>
-        <ConstantValue>131</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LiteralConstant" UId="42">
-      <Constant>
-        <ConstantType>UInt</ConstantType>
-        <ConstantValue>3</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LocalVariable" UId="43">
-      <Symbol>
-        <Component Name="Send_Coordinates" />
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="44">
-      <Symbol>
-        <Component Name="Address" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="45">
-      <Symbol>
-        <Component Name="Clock_1Hz" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="46">
-      <Symbol>
-        <Component Name="Modbus_Cycle_Counter" />
-        <Component Name="CV" />
-      </Symbol>
-    </Access>
-    <Access Scope="LiteralConstant" UId="47">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>4</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="LiteralConstant" UId="48">
-      <Constant>
-        <ConstantType>Int</ConstantType>
-        <ConstantValue>1</ConstantValue>
-      </Constant>
-    </Access>
-    <Part Name="Ne" UId="49">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="MB_CLIENT" Version="6.0" UId="50">
-      <Instance Scope="GlobalVariable" UId="51">
+    <Part Name="Contact" UId="35" />
+    <Part Name="MB_CLIENT" Version="6.0" UId="36">
+      <Instance Scope="GlobalVariable" UId="37">
         <Component Name="Modbus_Write" />
       </Instance>
     </Part>
-    <Part Name="Ne" UId="52">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
+    <Part Name="Contact" UId="38">
+      <Negated Name="operand" />
     </Part>
-    <Part Name="MB_CLIENT" Version="6.0" UId="53">
-      <Instance Scope="GlobalVariable" UId="54">
+    <Part Name="MB_CLIENT" Version="6.0" UId="39">
+      <Instance Scope="GlobalVariable" UId="40">
         <Component Name="Modbus_Receive" />
       </Instance>
     </Part>
-    <Part Name="Ne" UId="55">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="MB_CLIENT" Version="6.0" UId="56">
-      <Instance Scope="GlobalVariable" UId="57">
-        <Component Name="Modbus_Coordinates" />
-      </Instance>
-    </Part>
-    <Part Name="Contact" UId="58" />
-    <Part Name="Ge" UId="59">
-      <TemplateValue Name="SrcType" Type="Type">Int</TemplateValue>
-    </Part>
-    <Part Name="CTU" Version="1.0" UId="60">
-      <Instance Scope="GlobalVariable" UId="61">
-        <Component Name="Modbus_Cycle_Counter" />
-      </Instance>
-      <TemplateValue Name="value_type" Type="Type">Int</TemplateValue>
-    </Part>
   </Parts>
   <Wires>
-    <Wire UId="93">
+    <Wire UId="61">
       <Powerrail />
-      <NameCon UId="50" Name="en" />
-      <NameCon UId="49" Name="pre" />
-      <NameCon UId="53" Name="en" />
-      <NameCon UId="52" Name="pre" />
-      <NameCon UId="56" Name="en" />
-      <NameCon UId="55" Name="pre" />
-      <NameCon UId="58" Name="in" />
-      <NameCon UId="59" Name="pre" />
+      <NameCon UId="36" Name="en" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="39" Name="en" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="21" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="DISCONNECT" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="22" />
+      <NameCon UId="36" Name="REQ" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="MB_MODE" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="25" />
+      <NameCon UId="36" Name="MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="68">
+      <OpenCon UId="41" />
+      <NameCon UId="36" Name="RD_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="69">
+      <OpenCon UId="42" />
+      <NameCon UId="36" Name="RD_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="43" />
+      <NameCon UId="36" Name="WR_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="71">
+      <OpenCon UId="44" />
+      <NameCon UId="36" Name="WR_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="26" />
+      <NameCon UId="36" Name="MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="27" />
+      <NameCon UId="36" Name="CONNECT" />
+    </Wire>
+    <Wire UId="74">
+      <OpenCon UId="45" />
+      <NameCon UId="36" Name="RD_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="75">
+      <OpenCon UId="46" />
+      <NameCon UId="36" Name="WR_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="36" Name="DONE" />
+      <OpenCon UId="47" />
+    </Wire>
+    <Wire UId="77">
+      <NameCon UId="36" Name="BUSY" />
+      <OpenCon UId="48" />
+    </Wire>
+    <Wire UId="78">
+      <NameCon UId="36" Name="ERROR" />
+      <OpenCon UId="49" />
+    </Wire>
+    <Wire UId="79">
+      <NameCon UId="36" Name="STATUS" />
+      <OpenCon UId="50" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="28" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="81">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="39" Name="DISCONNECT" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="29" />
+      <NameCon UId="39" Name="REQ" />
+    </Wire>
+    <Wire UId="83">
+      <IdentCon UId="30" />
+      <NameCon UId="39" Name="MB_MODE" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="31" />
+      <NameCon UId="39" Name="MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="85">
+      <IdentCon UId="32" />
+      <NameCon UId="39" Name="MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="51" />
+      <NameCon UId="39" Name="RD_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="52" />
+      <NameCon UId="39" Name="RD_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="53" />
+      <NameCon UId="39" Name="WR_MB_DATA_ADDR" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="54" />
+      <NameCon UId="39" Name="WR_MB_DATA_LEN" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="33" />
+      <NameCon UId="39" Name="MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="91">
+      <IdentCon UId="34" />
+      <NameCon UId="39" Name="CONNECT" />
+    </Wire>
+    <Wire UId="92">
+      <OpenCon UId="55" />
+      <NameCon UId="39" Name="RD_MB_DATA_PTR" />
+    </Wire>
+    <Wire UId="93">
+      <OpenCon UId="56" />
+      <NameCon UId="39" Name="WR_MB_DATA_PTR" />
     </Wire>
     <Wire UId="94">
-      <IdentCon UId="21" />
-      <NameCon UId="49" Name="in1" />
+      <NameCon UId="39" Name="DONE" />
+      <OpenCon UId="57" />
     </Wire>
     <Wire UId="95">
-      <IdentCon UId="22" />
-      <NameCon UId="49" Name="in2" />
+      <NameCon UId="39" Name="BUSY" />
+      <OpenCon UId="58" />
     </Wire>
     <Wire UId="96">
-      <NameCon UId="49" Name="out" />
-      <NameCon UId="50" Name="DISCONNECT" />
+      <NameCon UId="39" Name="ERROR" />
+      <OpenCon UId="59" />
     </Wire>
     <Wire UId="97">
-      <IdentCon UId="23" />
-      <NameCon UId="50" Name="REQ" />
-    </Wire>
-    <Wire UId="98">
-      <IdentCon UId="24" />
-      <NameCon UId="50" Name="MB_MODE" />
-    </Wire>
-    <Wire UId="99">
-      <IdentCon UId="25" />
-      <NameCon UId="50" Name="MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="100">
-      <IdentCon UId="26" />
-      <NameCon UId="50" Name="MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="101">
-      <OpenCon UId="62" />
-      <NameCon UId="50" Name="RD_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="102">
-      <OpenCon UId="63" />
-      <NameCon UId="50" Name="RD_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="103">
-      <OpenCon UId="64" />
-      <NameCon UId="50" Name="WR_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="104">
-      <OpenCon UId="65" />
-      <NameCon UId="50" Name="WR_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="105">
-      <IdentCon UId="27" />
-      <NameCon UId="50" Name="MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="106">
-      <IdentCon UId="28" />
-      <NameCon UId="50" Name="CONNECT" />
-    </Wire>
-    <Wire UId="107">
-      <OpenCon UId="66" />
-      <NameCon UId="50" Name="RD_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="108">
-      <OpenCon UId="67" />
-      <NameCon UId="50" Name="WR_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="109">
-      <NameCon UId="50" Name="DONE" />
-      <OpenCon UId="68" />
-    </Wire>
-    <Wire UId="110">
-      <NameCon UId="50" Name="BUSY" />
-      <OpenCon UId="69" />
-    </Wire>
-    <Wire UId="111">
-      <NameCon UId="50" Name="ERROR" />
-      <OpenCon UId="70" />
-    </Wire>
-    <Wire UId="112">
-      <NameCon UId="50" Name="STATUS" />
-      <OpenCon UId="71" />
-    </Wire>
-    <Wire UId="113">
-      <IdentCon UId="29" />
-      <NameCon UId="52" Name="in1" />
-    </Wire>
-    <Wire UId="114">
-      <IdentCon UId="30" />
-      <NameCon UId="52" Name="in2" />
-    </Wire>
-    <Wire UId="115">
-      <NameCon UId="52" Name="out" />
-      <NameCon UId="53" Name="DISCONNECT" />
-    </Wire>
-    <Wire UId="116">
-      <IdentCon UId="31" />
-      <NameCon UId="53" Name="REQ" />
-    </Wire>
-    <Wire UId="117">
-      <IdentCon UId="32" />
-      <NameCon UId="53" Name="MB_MODE" />
-    </Wire>
-    <Wire UId="118">
-      <IdentCon UId="33" />
-      <NameCon UId="53" Name="MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="119">
-      <IdentCon UId="34" />
-      <NameCon UId="53" Name="MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="120">
-      <OpenCon UId="72" />
-      <NameCon UId="53" Name="RD_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="121">
-      <OpenCon UId="73" />
-      <NameCon UId="53" Name="RD_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="122">
-      <OpenCon UId="74" />
-      <NameCon UId="53" Name="WR_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="123">
-      <OpenCon UId="75" />
-      <NameCon UId="53" Name="WR_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="124">
-      <IdentCon UId="35" />
-      <NameCon UId="53" Name="MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="125">
-      <IdentCon UId="36" />
-      <NameCon UId="53" Name="CONNECT" />
-    </Wire>
-    <Wire UId="126">
-      <OpenCon UId="76" />
-      <NameCon UId="53" Name="RD_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="127">
-      <OpenCon UId="77" />
-      <NameCon UId="53" Name="WR_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="128">
-      <NameCon UId="53" Name="DONE" />
-      <OpenCon UId="78" />
-    </Wire>
-    <Wire UId="129">
-      <NameCon UId="53" Name="BUSY" />
-      <OpenCon UId="79" />
-    </Wire>
-    <Wire UId="130">
-      <NameCon UId="53" Name="ERROR" />
-      <OpenCon UId="80" />
-    </Wire>
-    <Wire UId="131">
-      <NameCon UId="53" Name="STATUS" />
-      <OpenCon UId="81" />
-    </Wire>
-    <Wire UId="132">
-      <IdentCon UId="37" />
-      <NameCon UId="55" Name="in1" />
-    </Wire>
-    <Wire UId="133">
-      <IdentCon UId="38" />
-      <NameCon UId="55" Name="in2" />
-    </Wire>
-    <Wire UId="134">
-      <NameCon UId="55" Name="out" />
-      <NameCon UId="56" Name="DISCONNECT" />
-    </Wire>
-    <Wire UId="135">
-      <IdentCon UId="39" />
-      <NameCon UId="56" Name="REQ" />
-    </Wire>
-    <Wire UId="136">
-      <IdentCon UId="40" />
-      <NameCon UId="56" Name="MB_MODE" />
-    </Wire>
-    <Wire UId="137">
-      <IdentCon UId="41" />
-      <NameCon UId="56" Name="MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="138">
-      <IdentCon UId="42" />
-      <NameCon UId="56" Name="MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="139">
-      <OpenCon UId="82" />
-      <NameCon UId="56" Name="RD_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="140">
-      <OpenCon UId="83" />
-      <NameCon UId="56" Name="RD_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="141">
-      <OpenCon UId="84" />
-      <NameCon UId="56" Name="WR_MB_DATA_ADDR" />
-    </Wire>
-    <Wire UId="142">
-      <OpenCon UId="85" />
-      <NameCon UId="56" Name="WR_MB_DATA_LEN" />
-    </Wire>
-    <Wire UId="143">
-      <IdentCon UId="43" />
-      <NameCon UId="56" Name="MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="144">
-      <IdentCon UId="44" />
-      <NameCon UId="56" Name="CONNECT" />
-    </Wire>
-    <Wire UId="145">
-      <OpenCon UId="86" />
-      <NameCon UId="56" Name="RD_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="146">
-      <OpenCon UId="87" />
-      <NameCon UId="56" Name="WR_MB_DATA_PTR" />
-    </Wire>
-    <Wire UId="147">
-      <NameCon UId="56" Name="DONE" />
-      <OpenCon UId="88" />
-    </Wire>
-    <Wire UId="148">
-      <NameCon UId="56" Name="BUSY" />
-      <OpenCon UId="89" />
-    </Wire>
-    <Wire UId="149">
-      <NameCon UId="56" Name="ERROR" />
-      <OpenCon UId="90" />
-    </Wire>
-    <Wire UId="150">
-      <NameCon UId="56" Name="STATUS" />
-      <OpenCon UId="91" />
-    </Wire>
-    <Wire UId="151">
-      <IdentCon UId="45" />
-      <NameCon UId="58" Name="operand" />
-    </Wire>
-    <Wire UId="152">
-      <NameCon UId="58" Name="out" />
-      <NameCon UId="60" Name="CU" />
-    </Wire>
-    <Wire UId="153">
-      <IdentCon UId="46" />
-      <NameCon UId="59" Name="in1" />
-    </Wire>
-    <Wire UId="154">
-      <IdentCon UId="47" />
-      <NameCon UId="59" Name="in2" />
-    </Wire>
-    <Wire UId="155">
-      <NameCon UId="59" Name="out" />
-      <NameCon UId="60" Name="R" />
-    </Wire>
-    <Wire UId="156">
-      <IdentCon UId="48" />
-      <NameCon UId="60" Name="PV" />
-    </Wire>
-    <Wire UId="157">
-      <NameCon UId="60" Name="CV" />
-      <OpenCon UId="92" />
+      <NameCon UId="39" Name="STATUS" />
+      <OpenCon UId="60" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1597,39 +1423,34 @@ V.0.1.0 - Created function block</Text>
         <Component Name="Proces_Item" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="22">
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
       <Symbol>
         <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>8</ConstantValue>
+              <ConstantValue>0</ConstantValue>
             </Constant>
           </Access>
         </Component>
-      </Symbol>
-    </Access>
-    <Access Scope="LocalVariable" UId="23">
-      <Symbol>
-        <Component Name="Place_Item_Conveyor" />
       </Symbol>
     </Access>
     <Access Scope="LocalVariable" UId="24">
       <Symbol>
-        <Component Name="Send_Data" AccessModifier="Array">
-          <Access Scope="LiteralConstant">
-            <Constant>
-              <ConstantType>DInt</ConstantType>
-              <ConstantValue>9</ConstantValue>
-            </Constant>
-          </Access>
-        </Component>
+        <Component Name="Place_Item_Conveyor" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="25">
-      <Symbol>
-        <Component Name="Place_Item_Storage" />
-      </Symbol>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
     </Access>
     <Access Scope="LocalVariable" UId="26">
       <Symbol>
@@ -1637,7 +1458,7 @@ V.0.1.0 - Created function block</Text>
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>10</ConstantValue>
+              <ConstantValue>0</ConstantValue>
             </Constant>
           </Access>
         </Component>
@@ -1645,85 +1466,138 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="27">
       <Symbol>
-        <Component Name="Scrap_Item" />
+        <Component Name="Place_Item_Storage" />
       </Symbol>
     </Access>
-    <Access Scope="LocalVariable" UId="28">
+    <Access Scope="LiteralConstant" UId="28">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
       <Symbol>
         <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>11</ConstantValue>
+              <ConstantValue>0</ConstantValue>
             </Constant>
           </Access>
         </Component>
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="29" />
-    <Part Name="Coil" UId="30" />
-    <Part Name="Contact" UId="31" />
-    <Part Name="Coil" UId="32" />
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="Scrap_Item" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="Send_Data" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>0</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
     <Part Name="Contact" UId="33" />
-    <Part Name="Coil" UId="34" />
+    <Part Name="Move" UId="34" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
     <Part Name="Contact" UId="35" />
-    <Part Name="Coil" UId="36" />
+    <Part Name="Move" UId="36" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="37" />
+    <Part Name="Move" UId="38" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Contact" UId="39" />
+    <Part Name="Move" UId="40" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
   </Parts>
   <Wires>
-    <Wire UId="37">
+    <Wire UId="41">
       <Powerrail />
-      <NameCon UId="29" Name="in" />
-      <NameCon UId="31" Name="in" />
       <NameCon UId="33" Name="in" />
       <NameCon UId="35" Name="in" />
-    </Wire>
-    <Wire UId="38">
-      <IdentCon UId="21" />
-      <NameCon UId="29" Name="operand" />
-    </Wire>
-    <Wire UId="39">
-      <NameCon UId="29" Name="out" />
-      <NameCon UId="30" Name="in" />
-    </Wire>
-    <Wire UId="40">
-      <IdentCon UId="22" />
-      <NameCon UId="30" Name="operand" />
-    </Wire>
-    <Wire UId="41">
-      <IdentCon UId="23" />
-      <NameCon UId="31" Name="operand" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="39" Name="in" />
     </Wire>
     <Wire UId="42">
-      <NameCon UId="31" Name="out" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
-    <Wire UId="43">
-      <IdentCon UId="24" />
-      <NameCon UId="32" Name="operand" />
-    </Wire>
-    <Wire UId="44">
-      <IdentCon UId="25" />
+      <IdentCon UId="21" />
       <NameCon UId="33" Name="operand" />
     </Wire>
-    <Wire UId="45">
+    <Wire UId="43">
       <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="en" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="22" />
       <NameCon UId="34" Name="in" />
     </Wire>
-    <Wire UId="46">
-      <IdentCon UId="26" />
-      <NameCon UId="34" Name="operand" />
+    <Wire UId="45">
+      <NameCon UId="34" Name="out1" />
+      <IdentCon UId="23" />
     </Wire>
-    <Wire UId="47">
-      <IdentCon UId="27" />
+    <Wire UId="46">
+      <IdentCon UId="24" />
       <NameCon UId="35" Name="operand" />
     </Wire>
-    <Wire UId="48">
+    <Wire UId="47">
       <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="en" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="25" />
       <NameCon UId="36" Name="in" />
     </Wire>
     <Wire UId="49">
+      <NameCon UId="36" Name="out1" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="27" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="en" />
+    </Wire>
+    <Wire UId="52">
       <IdentCon UId="28" />
-      <NameCon UId="36" Name="operand" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="53">
+      <NameCon UId="38" Name="out1" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="30" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="en" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="31" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="40" Name="out1" />
+      <IdentCon UId="32" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1970,11 +1844,11 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="25">
       <Symbol>
-        <Component Name="Send_Coordinates" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>0</ConstantValue>
+              <ConstantValue>1</ConstantValue>
             </Constant>
           </Access>
         </Component>
@@ -1994,11 +1868,11 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="27">
       <Symbol>
-        <Component Name="Send_Coordinates" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>1</ConstantValue>
+              <ConstantValue>2</ConstantValue>
             </Constant>
           </Access>
         </Component>
@@ -2018,11 +1892,11 @@ V.0.1.0 - Created function block</Text>
     </Access>
     <Access Scope="LocalVariable" UId="29">
       <Symbol>
-        <Component Name="Send_Coordinates" AccessModifier="Array">
+        <Component Name="Send_Data" AccessModifier="Array">
           <Access Scope="LiteralConstant">
             <Constant>
               <ConstantType>DInt</ConstantType>
-              <ConstantValue>2</ConstantValue>
+              <ConstantValue>3</ConstantValue>
             </Constant>
           </Access>
         </Component>
