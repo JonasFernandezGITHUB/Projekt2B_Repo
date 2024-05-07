@@ -4,8 +4,12 @@
   <SW.Blocks.FC ID="0">
     <AttributeList>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
-  <Section Name="Input" />
-  <Section Name="Output" />
+  <Section Name="Input">
+    <Member Name="Start_Feeder" Datatype="Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Feeder_Active" Datatype="Bool" />
+  </Section>
   <Section Name="InOut" />
   <Section Name="Temp" />
   <Section Name="Constant" />
@@ -42,7 +46,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Clock_1Hz" />
+        <Component Name="Clock_2Hz" />
       </Symbol>
     </Access>
     <Access Scope="LiteralConstant" UId="23">
@@ -102,88 +106,94 @@
     <Part Name="Contact" UId="32">
       <Negated Name="operand" />
     </Part>
-    <Part Name="MB_CLIENT" Version="6.0" UId="33">
-      <Instance Scope="GlobalVariable" UId="34">
+    <Part Name="Contact" UId="33" />
+    <Part Name="MB_CLIENT" Version="6.0" UId="34">
+      <Instance Scope="GlobalVariable" UId="35">
         <Component Name="MB_CLIENT_DB_Arduino_Read" />
       </Instance>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="41">
-      <Powerrail />
-      <NameCon UId="33" Name="en" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
     <Wire UId="42">
+      <Powerrail />
+      <NameCon UId="34" Name="en" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="43">
       <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="REQ" />
-    </Wire>
     <Wire UId="44">
-      <IdentCon UId="22" />
-      <NameCon UId="33" Name="DISCONNECT" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="34" Name="REQ" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="23" />
-      <NameCon UId="33" Name="MB_MODE" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="24" />
-      <NameCon UId="33" Name="MB_DATA_ADDR" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="DISCONNECT" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="MB_DATA_LEN" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="MB_MODE" />
     </Wire>
     <Wire UId="48">
-      <OpenCon UId="35" />
-      <NameCon UId="33" Name="RD_MB_DATA_ADDR" />
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="MB_DATA_ADDR" />
     </Wire>
     <Wire UId="49">
-      <OpenCon UId="36" />
-      <NameCon UId="33" Name="RD_MB_DATA_LEN" />
+      <IdentCon UId="25" />
+      <NameCon UId="34" Name="MB_DATA_LEN" />
     </Wire>
     <Wire UId="50">
-      <OpenCon UId="37" />
-      <NameCon UId="33" Name="WR_MB_DATA_ADDR" />
+      <OpenCon UId="36" />
+      <NameCon UId="34" Name="RD_MB_DATA_ADDR" />
     </Wire>
     <Wire UId="51">
-      <OpenCon UId="38" />
-      <NameCon UId="33" Name="WR_MB_DATA_LEN" />
+      <OpenCon UId="37" />
+      <NameCon UId="34" Name="RD_MB_DATA_LEN" />
     </Wire>
     <Wire UId="52">
-      <IdentCon UId="26" />
-      <NameCon UId="33" Name="MB_DATA_PTR" />
+      <OpenCon UId="38" />
+      <NameCon UId="34" Name="WR_MB_DATA_ADDR" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="27" />
-      <NameCon UId="33" Name="CONNECT" />
+      <OpenCon UId="39" />
+      <NameCon UId="34" Name="WR_MB_DATA_LEN" />
     </Wire>
     <Wire UId="54">
-      <OpenCon UId="39" />
-      <NameCon UId="33" Name="RD_MB_DATA_PTR" />
+      <IdentCon UId="26" />
+      <NameCon UId="34" Name="MB_DATA_PTR" />
     </Wire>
     <Wire UId="55">
-      <OpenCon UId="40" />
-      <NameCon UId="33" Name="WR_MB_DATA_PTR" />
+      <IdentCon UId="27" />
+      <NameCon UId="34" Name="CONNECT" />
     </Wire>
     <Wire UId="56">
-      <NameCon UId="33" Name="DONE" />
-      <IdentCon UId="28" />
+      <OpenCon UId="40" />
+      <NameCon UId="34" Name="RD_MB_DATA_PTR" />
     </Wire>
     <Wire UId="57">
-      <NameCon UId="33" Name="BUSY" />
-      <IdentCon UId="29" />
+      <OpenCon UId="41" />
+      <NameCon UId="34" Name="WR_MB_DATA_PTR" />
     </Wire>
     <Wire UId="58">
-      <NameCon UId="33" Name="ERROR" />
-      <IdentCon UId="30" />
+      <NameCon UId="34" Name="DONE" />
+      <IdentCon UId="28" />
     </Wire>
     <Wire UId="59">
-      <NameCon UId="33" Name="STATUS" />
+      <NameCon UId="34" Name="BUSY" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="34" Name="ERROR" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="34" Name="STATUS" />
       <IdentCon UId="31" />
     </Wire>
   </Wires>
@@ -196,7 +206,7 @@
               <MultilingualTextItem ID="5" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Modbus Read from registers</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -206,7 +216,7 @@
               <MultilingualTextItem ID="7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Read</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -224,7 +234,7 @@
     </Access>
     <Access Scope="GlobalVariable" UId="22">
       <Symbol>
-        <Component Name="Clock_1Hz" />
+        <Component Name="Clock_2Hz" />
       </Symbol>
     </Access>
     <Access Scope="LiteralConstant" UId="23">
@@ -282,88 +292,96 @@
       </Symbol>
     </Access>
     <Part Name="Contact" UId="32" />
-    <Part Name="MB_CLIENT" Version="6.0" UId="33">
-      <Instance Scope="GlobalVariable" UId="34">
+    <Part Name="Contact" UId="33">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="MB_CLIENT" Version="6.0" UId="34">
+      <Instance Scope="GlobalVariable" UId="35">
         <Component Name="MB_CLIENT_DB_Arduino_Write" />
       </Instance>
     </Part>
   </Parts>
   <Wires>
-    <Wire UId="41">
-      <Powerrail />
-      <NameCon UId="33" Name="en" />
-      <NameCon UId="32" Name="in" />
-    </Wire>
     <Wire UId="42">
+      <Powerrail />
+      <NameCon UId="34" Name="en" />
+      <NameCon UId="32" Name="in" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="43">
       <IdentCon UId="21" />
       <NameCon UId="32" Name="operand" />
     </Wire>
-    <Wire UId="43">
-      <NameCon UId="32" Name="out" />
-      <NameCon UId="33" Name="REQ" />
-    </Wire>
     <Wire UId="44">
-      <IdentCon UId="22" />
-      <NameCon UId="33" Name="DISCONNECT" />
+      <NameCon UId="32" Name="out" />
+      <NameCon UId="34" Name="REQ" />
     </Wire>
     <Wire UId="45">
-      <IdentCon UId="23" />
-      <NameCon UId="33" Name="MB_MODE" />
+      <IdentCon UId="22" />
+      <NameCon UId="33" Name="operand" />
     </Wire>
     <Wire UId="46">
-      <IdentCon UId="24" />
-      <NameCon UId="33" Name="MB_DATA_ADDR" />
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="DISCONNECT" />
     </Wire>
     <Wire UId="47">
-      <IdentCon UId="25" />
-      <NameCon UId="33" Name="MB_DATA_LEN" />
+      <IdentCon UId="23" />
+      <NameCon UId="34" Name="MB_MODE" />
     </Wire>
     <Wire UId="48">
-      <OpenCon UId="35" />
-      <NameCon UId="33" Name="RD_MB_DATA_ADDR" />
+      <IdentCon UId="24" />
+      <NameCon UId="34" Name="MB_DATA_ADDR" />
     </Wire>
     <Wire UId="49">
-      <OpenCon UId="36" />
-      <NameCon UId="33" Name="RD_MB_DATA_LEN" />
+      <IdentCon UId="25" />
+      <NameCon UId="34" Name="MB_DATA_LEN" />
     </Wire>
     <Wire UId="50">
-      <OpenCon UId="37" />
-      <NameCon UId="33" Name="WR_MB_DATA_ADDR" />
+      <OpenCon UId="36" />
+      <NameCon UId="34" Name="RD_MB_DATA_ADDR" />
     </Wire>
     <Wire UId="51">
-      <OpenCon UId="38" />
-      <NameCon UId="33" Name="WR_MB_DATA_LEN" />
+      <OpenCon UId="37" />
+      <NameCon UId="34" Name="RD_MB_DATA_LEN" />
     </Wire>
     <Wire UId="52">
-      <IdentCon UId="26" />
-      <NameCon UId="33" Name="MB_DATA_PTR" />
+      <OpenCon UId="38" />
+      <NameCon UId="34" Name="WR_MB_DATA_ADDR" />
     </Wire>
     <Wire UId="53">
-      <IdentCon UId="27" />
-      <NameCon UId="33" Name="CONNECT" />
+      <OpenCon UId="39" />
+      <NameCon UId="34" Name="WR_MB_DATA_LEN" />
     </Wire>
     <Wire UId="54">
-      <OpenCon UId="39" />
-      <NameCon UId="33" Name="RD_MB_DATA_PTR" />
+      <IdentCon UId="26" />
+      <NameCon UId="34" Name="MB_DATA_PTR" />
     </Wire>
     <Wire UId="55">
-      <OpenCon UId="40" />
-      <NameCon UId="33" Name="WR_MB_DATA_PTR" />
+      <IdentCon UId="27" />
+      <NameCon UId="34" Name="CONNECT" />
     </Wire>
     <Wire UId="56">
-      <NameCon UId="33" Name="DONE" />
-      <IdentCon UId="28" />
+      <OpenCon UId="40" />
+      <NameCon UId="34" Name="RD_MB_DATA_PTR" />
     </Wire>
     <Wire UId="57">
-      <NameCon UId="33" Name="BUSY" />
-      <IdentCon UId="29" />
+      <OpenCon UId="41" />
+      <NameCon UId="34" Name="WR_MB_DATA_PTR" />
     </Wire>
     <Wire UId="58">
-      <NameCon UId="33" Name="ERROR" />
-      <IdentCon UId="30" />
+      <NameCon UId="34" Name="DONE" />
+      <IdentCon UId="28" />
     </Wire>
     <Wire UId="59">
-      <NameCon UId="33" Name="STATUS" />
+      <NameCon UId="34" Name="BUSY" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="60">
+      <NameCon UId="34" Name="ERROR" />
+      <IdentCon UId="30" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="34" Name="STATUS" />
       <IdentCon UId="31" />
     </Wire>
   </Wires>
@@ -376,7 +394,7 @@
               <MultilingualTextItem ID="A" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino modbus write to registers</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -386,7 +404,7 @@
               <MultilingualTextItem ID="C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Write</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -395,7 +413,94 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource />
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Start_Feeder" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Arduino_Data" />
+        <Component Name="Read_Data" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Arduino_Data" />
+        <Component Name="Write_Data" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26" />
+    <Part Name="Eq" UId="27">
+      <TemplateValue Name="SrcType" Type="Type">Word</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="28" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="29">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="31">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="pre" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="in1" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="in2" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="28" Name="out1" />
+      <IdentCon UId="25" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -404,7 +509,9 @@
               <MultilingualTextItem ID="F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Starts arduino feeder on PLC request.
+Start feeder input should only be active briefly.
+Can only move signal to Arduino if Arduino is ready.</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -414,19 +521,121 @@
               <MultilingualTextItem ID="11" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Arduino Start Feeder</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="12" CompositionName="Title">
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Arduino_Data" />
+        <Component Name="Read_Data" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Arduino_Data" />
+        <Component Name="Write_Data" AccessModifier="Array">
+          <Access Scope="LiteralConstant">
+            <Constant>
+              <ConstantType>DInt</ConstantType>
+              <ConstantValue>1</ConstantValue>
+            </Constant>
+          </Access>
+        </Component>
+      </Symbol>
+    </Access>
+    <Part Name="Eq" UId="25">
+      <TemplateValue Name="SrcType" Type="Type">Word</TemplateValue>
+    </Part>
+    <Part Name="Move" UId="26" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <Powerrail />
+      <NameCon UId="25" Name="pre" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="in1" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="in2" />
+    </Wire>
+    <Wire UId="30">
+      <NameCon UId="25" Name="out" />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out1" />
+      <IdentCon UId="24" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
         <ObjectList>
-          <MultilingualTextItem ID="13" CompositionName="Items">
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>If the Arduino returns signal that the feeding process has started, the value requesting a new item is returned to 0.
+</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Arduino stop feeding</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="17" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="18" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
-              <Text />
+              <Text>Arduino Communications v0.1</Text>
             </AttributeList>
           </MultilingualTextItem>
         </ObjectList>
