@@ -56,7 +56,7 @@
                     <StartValue>1</StartValue>
                   </Subelement>
                   <Subelement Path="4">
-                    <StartValue>52</StartValue>
+                    <StartValue>61</StartValue>
                   </Subelement>
                 </Member>
               </Section>
@@ -81,7 +81,7 @@
       <MemoryReserve>100</MemoryReserve>
       <Name>Arduino_Modbus</Name>
       <Namespace />
-      <Number>1</Number>
+      <Number>6</Number>
       <ProgrammingLanguage>LAD</ProgrammingLanguage>
       <SetENOAutomatically>false</SetENOAutomatically>
     </AttributeList>
@@ -113,13 +113,13 @@
     <Access Scope="LiteralConstant" UId="23">
       <Constant>
         <ConstantType>USInt</ConstantType>
-        <ConstantValue>116</ConstantValue>
+        <ConstantValue>100</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>UDInt</ConstantType>
-        <ConstantValue>135</ConstantValue>
+        <ConstantValue>40100</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="25">
@@ -151,13 +151,13 @@
     <Access Scope="LiteralConstant" UId="30">
       <Constant>
         <ConstantType>USInt</ConstantType>
-        <ConstantValue>103</ConstantValue>
+        <ConstantValue>100</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="31">
       <Constant>
         <ConstantType>UDInt</ConstantType>
-        <ConstantValue>135</ConstantValue>
+        <ConstantValue>40100</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="32">
