@@ -28,10 +28,14 @@
     <Member Name="Address_1" Datatype="TCON_IP_v4" Version="1.0" />
     <Member Name="Address" Datatype="TCON_IP_v4" Version="1.0" />
     <Member Name="Receive_Data" Datatype="Int" />
-    <Member Name="Send_Data" Datatype="Array[0..5] of Int" />
+    <Member Name="Send_Data" Datatype="Array[0..10] of Int" />
     <Member Name="Send_Coordinates" Datatype="Array[0..2] of Int" />
-    <Member Name="Letter_A" Datatype="Array[0..20] of &quot;XYZ_Coordinates&quot;" />
-    <Member Name="Letter_Steps" Datatype="Int">
+    <Member Name="Letter_Steps_C" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Letter_Steps_A" Datatype="Int">
       <AttributeList>
         <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
       </AttributeList>
@@ -45,7 +49,26 @@
     <Member Name="Send_Letter_C" Datatype="Bool" />
     <Member Name="MB_Client_Mode" Datatype="Int" />
     <Member Name="MB_Client_Modbus_Address" Datatype="Int" />
-    <Member Name="For_Loop_Counter" Datatype="Int" />
+    <Member Name="For_Loop_Counter" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Letter_A_Coordinates" Datatype="Array[0..9] of &quot;XYZ_Coordinates&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="X" Datatype="Int">
+            <Subelement Path="2">
+              <StartValue>20</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Letter_C_Coordinates" Datatype="Array[0..5] of &quot;XYZ_Coordinates&quot;" />
+    <Member Name="Robot_Step" Datatype="Int" />
   </Section>
 </Sections></Interface>
       <Name>Robot_Modbus_DB</Name>
