@@ -11,7 +11,7 @@
     <Member Name="Mode" Datatype="Int" />
   </Section>
 </Sections></Interface>
-      <Name>XYZ_Coordinates</Name>
+      <Name>Letter_Coordinates_Linear</Name>
       <Namespace />
     </AttributeList>
     <ObjectList>
